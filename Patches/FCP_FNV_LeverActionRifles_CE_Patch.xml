@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP Fallout New Vegas Lever Action Rifles!</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- === Tools === -->
+                <li Class="PatchOperationReplace">
+                    <xpath>
+						/Defs/ThingDef[
+							defName = "FCP_Gun_Brush_Gun" or
+							defName = "FCP_Gun_Medicine_Stick" or
+							defName = "FCP_Gun_Cowboy_Repeater" or
+							defName = "FCP_Gun_La_Longue_Carabine" or 
+							defName = "FCP_Gun_BB_Gun" or
+							defName = "FCP_Gun_Abilene_Kid_LE_BB_Gun"
+						]/tools
+                    </xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>stock</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <chanceFactor>1.5</chanceFactor>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>barrel</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>5</power>
+                                <cooldownTime>2.02</cooldownTime>
+                                <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>muzzle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <!-- BB Gun -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_BB_Gun</defName>
+                    <statBases>
+                        <WorkToMake>1000</WorkToMake>
+                        <Mass>1.5</Mass>
+                        <Bulk>4.5</Bulk>
+                        <SwayFactor>1.5</SwayFactor>
+                        <ShotSpread>0.2</ShotSpread>
+                        <SightsEfficiency>0.6</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.25</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <ComponentIndustrial>1</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_22Short_FMJ</defaultProjectile>
+                        <warmupTime>0.3</warmupTime>
+                        <range>8</range>
+                        <soundCast>Shot_BB_Gun</soundCast>
+                        <muzzleFlashScale>0</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>25</magazineSize>
+                        <reloadTime>1.5</reloadTime>
+                        <ammoSet>AmmoSet_22Short</ammoSet>
+                        <reloadOneAtATime>false</reloadOneAtATime>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>AimedShot</aiAimMode>
+                    </FireModes>
+                </li>
+
+                <!-- BB Gun Unique -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Abilene_Kid_LE_BB_Gun</defName>
+                    <statBases>
+                        <WorkToMake>20000</WorkToMake>
+                        <Mass>1.5</Mass>
+                        <Bulk>4.5</Bulk>
+                        <SwayFactor>1.2</SwayFactor>
+                        <ShotSpread>0.18</ShotSpread>
+                        <SightsEfficiency>0.7</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.2</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Plasteel>30</Plasteel>
+                        <ComponentIndustrial>2</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_22Short_FMJ</defaultProjectile>
+                        <warmupTime>0.25</warmupTime>
+                        <range>12</range>
+                        <soundCast>Shot_BB_Gun</soundCast>
+                        <muzzleFlashScale>0</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>35</magazineSize>
+                        <reloadTime>1.2</reloadTime>
+                        <ammoSet>AmmoSet_22Short</ammoSet>
+                        <reloadOneAtATime>false</reloadOneAtATime>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>AimedShot</aiAimMode>
+                    </FireModes>
+                </li>
+
+
+
+                <!-- Brush Gun -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Brush_Gun</defName>
+                    <statBases>
+                        <WorkToMake>15000</WorkToMake>
+                        <Mass>3.0</Mass>
+                        <Bulk>12.50</Bulk>
+                        <SwayFactor>1.5</SwayFactor>
+                        <ShotSpread>0.02</ShotSpread>
+                        <SightsEfficiency>1</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.65</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>60</Steel>
+                        <ComponentIndustrial>4</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_4570Gov_FMJ</defaultProjectile>
+                        <warmupTime>0.9</warmupTime>
+                        <range>48</range>
+                        <soundCast>Shot_BoltActionRifle</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>6</magazineSize>
+                        <reloadTime>0.5</reloadTime>
+                        <ammoSet>AmmoSet_4570Gov</ammoSet>
+                        <reloadOneAtATime>true</reloadOneAtATime>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>AimedShot</aiAimMode>
+                    </FireModes>
+                </li>
+
+                <!-- Brush Gun Unique -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Medicine_Stick</defName>
+                    <statBases>
+                        <WorkToMake>50000</WorkToMake>
+                        <Mass>3.5</Mass>
+                        <Bulk>12.50</Bulk>
+                        <SwayFactor>1.32</SwayFactor>
+                        <ShotSpread>0.01</ShotSpread>
+                        <SightsEfficiency>1.2</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.60</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Plasteel>60</Plasteel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_4570Gov_FMJ</defaultProjectile>
+                        <warmupTime>0.9</warmupTime>
+                        <range>48</range>
+                        <soundCast>Shot_BoltActionRifle</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>8</magazineSize>
+                        <reloadTime>0.4</reloadTime>
+                        <ammoSet>AmmoSet_4570Gov</ammoSet>
+                        <reloadOneAtATime>true</reloadOneAtATime>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>AimedShot</aiAimMode>
+                    </FireModes>
+                </li>
+
+                <!-- Cowboy Repeater -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Cowboy_Repeater</defName>
+                    <statBases>
+                        <WorkToMake>12000</WorkToMake>
+                        <Mass>2.9</Mass>
+                        <Bulk>8.5</Bulk>
+                        <SwayFactor>1.12</SwayFactor>
+                        <ShotSpread>0.03</ShotSpread>
+                        <SightsEfficiency>1.0</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.60</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>60</Steel>
+                        <ComponentIndustrial>3</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_357Magnum_FMJ</defaultProjectile>
+                        <warmupTime>0.7</warmupTime>
+                        <range>48</range>
+                        <soundCast>Shot_BoltActionRifle</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>8</magazineSize>
+                        <reloadTime>0.4</reloadTime>
+                        <ammoSet>AmmoSet_357Magnum</ammoSet>
+                        <reloadOneAtATime>true</reloadOneAtATime>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>AimedShot</aiAimMode>
+                    </FireModes>
+                </li>
+
+                <!-- Cowboy Repeater Unique -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_La_Longue_Carabine</defName>
+                    <statBases>
+                        <WorkToMake>30000</WorkToMake>
+                        <Mass>2.9</Mass>
+                        <Bulk>8.5</Bulk>
+                        <SwayFactor>1.02</SwayFactor>
+                        <ShotSpread>0.02</ShotSpread>
+                        <SightsEfficiency>1.6</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.55</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Plasteel>60</Plasteel>
+                        <ComponentIndustrial>8</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_357Magnum_FMJ</defaultProjectile>
+                        <warmupTime>0.5</warmupTime>
+                        <range>58</range>
+                        <soundCast>Shot_BoltActionRifle</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>1</magazineSize>
+                        <reloadTime>0.4</reloadTime>
+                        <ammoSet>AmmoSet_357Magnum</ammoSet>
+                        <reloadOneAtATime>true</reloadOneAtATime>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>AimedShot</aiAimMode>
+                    </FireModes>
+                </li>
+
+                <!-- Brush Gun -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Trail_Carbine</defName>
+                    <statBases>
+                        <WorkToMake>12000</WorkToMake>
+                        <Mass>3.2</Mass>
+                        <Bulk>12.50</Bulk>
+                        <SwayFactor>1.30</SwayFactor>
+                        <ShotSpread>0.02</ShotSpread>
+                        <SightsEfficiency>1</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.65</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>60</Steel>
+                        <ComponentIndustrial>3</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_44Magnum_FMJ</defaultProjectile>
+                        <warmupTime>0.9</warmupTime>
+                        <range>48</range>
+                        <soundCast>Shot_BoltActionRifle</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>6</magazineSize>
+                        <reloadTime>0.5</reloadTime>
+                        <ammoSet>AmmoSet_44Magnum</ammoSet>
+                        <reloadOneAtATime>true</reloadOneAtATime>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>AimedShot</aiAimMode>
+                    </FireModes>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

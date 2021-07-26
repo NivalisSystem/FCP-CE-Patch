@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP Fallout New Vegas Pistols!</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- === Tools === -->
+                <li Class="PatchOperationReplace">
+                    <xpath>
+						/Defs/ThingDef[
+							defName = "FCP_Gun_9mm_Pistol" or 
+							defName = "FCP_Gun_Maria" or 
+							defName = "FCP_Gun_10mm_Pistol" or
+							defName = "FCP_Gun_Weathered_10mm_Pistol" or
+							defName = "FCP_Gun_45_Auto_Pistol" or
+                            defName = "FCP_Gun_127mm_Pistol" or 
+                            defName = "FCP_Gun_Lil_Devil" or 
+                            defName = "FCP_Gun_Sileneced_22mm_Pistol"
+						]/tools
+                    </xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>grip</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>2</power>
+                                <cooldownTime>1.54</cooldownTime>
+                                <chanceFactor>1.5</chanceFactor>
+                                <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>muzzle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>2</power>
+                                <cooldownTime>1.54</cooldownTime>
+                                <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <!-- 9mm Pistol  -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_9mm_Pistol</defName>
+                    <statBases>
+                        <WorkToMake>5000</WorkToMake>
+                        <Mass>1.11</Mass>
+                        <Bulk>2.00</Bulk>
+                        <SwayFactor>0.32</SwayFactor>
+                        <ShotSpread>0.17</ShotSpread>
+                        <SightsEfficiency>0.8</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <ComponentIndustrial>2</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_9x19mmPara_FMJ</defaultProjectile>
+                        <warmupTime>0.3</warmupTime>
+                        <range>18</range>
+                        <soundCast>Shot_Autopistol</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>13</magazineSize>
+                        <reloadTime>1.7</reloadTime>
+                        <ammoSet>AmmoSet_9x19mmPara</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>SimpleGun</li>
+                        <li>CE_Sidearm</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                </li>
+
+                <!-- 9mm Pistol Unique -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Maria</defName>
+                    <statBases>
+                        <WorkToMake>5000</WorkToMake>
+                        <Mass>1.11</Mass>
+                        <Bulk>2.00</Bulk>
+                        <SwayFactor>0.28</SwayFactor>
+                        <ShotSpread>0.13</ShotSpread>
+                        <SightsEfficiency>0.9</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.30</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Plasteel>30</Plasteel>
+                        <ComponentSpacer>9</ComponentSpacer>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_9x19mmPara_FMJ</defaultProjectile>
+                        <warmupTime>0.3</warmupTime>
+                        <range>20</range>
+                        <soundCast>Shot_Autopistol</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>13</magazineSize>
+                        <reloadTime>1.7</reloadTime>
+                        <ammoSet>AmmoSet_9x19mmPara</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>SimpleGun</li>
+                        <li>CE_Sidearm</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                </li>
+
+                <!-- 10mm Pistol -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_10mm_Pistol</defName>
+                    <statBases>
+                        <WorkToMake>5000</WorkToMake>
+                        <Mass>1.2</Mass>
+                        <Bulk>2.20</Bulk>
+                        <SwayFactor>0.25</SwayFactor>
+                        <ShotSpread>0.12</ShotSpread>
+                        <SightsEfficiency>0.9</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.32</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <ComponentIndustrial>2</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_10mmAuto_FMJ</defaultProjectile>
+                        <warmupTime>0.3</warmupTime>
+                        <range>20</range>
+                        <soundCast>Shot_Autopistol</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>12</magazineSize>
+                        <reloadTime>1.3</reloadTime>
+                        <ammoSet>AmmoSet_10mmAuto</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>SimpleGun</li>
+                        <li>CE_Sidearm</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                </li>
+
+                <!-- 10mm Pistol Unique -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Weathered_10mm_Pistol</defName>
+                    <statBases>
+                        <WorkToMake>30000</WorkToMake>
+                        <Mass>1.2</Mass>
+                        <Bulk>2.20</Bulk>
+                        <SwayFactor>0.25</SwayFactor>
+                        <ShotSpread>0.12</ShotSpread>
+                        <SightsEfficiency>0.95</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.30</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <ComponentIndustrial>2</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_10mmAuto_FMJ</defaultProjectile>
+                        <warmupTime>0.3</warmupTime>
+                        <range>22</range>
+                        <soundCast>Shot_Autopistol</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>12</magazineSize>
+                        <reloadTime>1.3</reloadTime>
+                        <ammoSet>AmmoSet_10mmAuto</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>SimpleGun</li>
+                        <li>CE_Sidearm</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                </li>
+
+                <!-- .45 Auto Pistol -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_45_Auto_Pistol</defName>
+                    <statBases>
+                        <WorkToMake>6000</WorkToMake>
+                        <Mass>1.2</Mass>
+                        <Bulk>2.20</Bulk>
+                        <SwayFactor>0.25</SwayFactor>
+                        <ShotSpread>0.12</ShotSpread>
+                        <SightsEfficiency>0.90</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <ComponentIndustrial>2</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+                        <warmupTime>0.3</warmupTime>
+                        <range>15</range>
+                        <soundCast>Shot_Autopistol</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>7</magazineSize>
+                        <reloadTime>1.3</reloadTime>
+                        <ammoSet>AmmoSet_45ACP</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>SimpleGun</li>
+                        <li>CE_Sidearm</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                </li>
+
+                <!-- .45 Auto Pistol Unique -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_A_Light_Shining_in_Darkness</defName>
+                    <statBases>
+                        <WorkToMake>30000</WorkToMake>
+                        <Mass>1.2</Mass>
+                        <Bulk>2.20</Bulk>
+                        <SwayFactor>0.25</SwayFactor>
+                        <ShotSpread>0.12</ShotSpread>
+                        <SightsEfficiency>0.95</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <ComponentIndustrial>2</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+                        <warmupTime>0.3</warmupTime>
+                        <range>15</range>
+                        <soundCast>Shot_Autopistol</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>7</magazineSize>
+                        <reloadTime>1.3</reloadTime>
+                        <ammoSet>AmmoSet_45ACP</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>SimpleGun</li>
+                        <li>CE_Sidearm</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                </li>
+
+                <!-- 12.7mm Pistol -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_127mm_Pistol</defName>
+                    <statBases>
+                        <WorkToMake>9000</WorkToMake>
+                        <Mass>1.4</Mass>
+                        <Bulk>2.50</Bulk>
+                        <SwayFactor>0.25</SwayFactor>
+                        <ShotSpread>0.12</ShotSpread>
+                        <SightsEfficiency>0.9</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <ComponentIndustrial>4</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_50AE_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>25</range>
+                        <soundCast>Shot_Autopistol</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>7</magazineSize>
+                        <reloadTime>1.7</reloadTime>
+                        <ammoSet>AmmoSet_50AE</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>SimpleGun</li>
+                        <li>CE_Sidearm</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                </li>
+
+                <!-- 12.7mm Pistol Unique -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Lil_Devil</defName>
+                    <statBases>
+                        <WorkToMake>9000</WorkToMake>
+                        <Mass>1.4</Mass>
+                        <Bulk>2.50</Bulk>
+                        <SwayFactor>0.25</SwayFactor>
+                        <ShotSpread>0.12</ShotSpread>
+                        <SightsEfficiency>0.95</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.32</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <ComponentIndustrial>4</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_50AE_FMJ</defaultProjectile>
+                        <warmupTime>0.4</warmupTime>
+                        <range>26</range>
+                        <soundCast>Shot_Autopistol</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>7</magazineSize>
+                        <reloadTime>1.7</reloadTime>
+                        <ammoSet>AmmoSet_50AE</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>SimpleGun</li>
+                        <li>CE_Sidearm</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                </li>
+
+                <!-- Silenced .22mm Pistol -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Sileneced_22mm_Pistol</defName>
+                    <statBases>
+                        <WorkToMake>3000</WorkToMake>
+                        <Mass>0.8</Mass>
+                        <Bulk>0.8</Bulk>
+                        <SwayFactor>0.25</SwayFactor>
+                        <ShotSpread>0.12</ShotSpread>
+                        <SightsEfficiency>0.95</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.32</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>25</Steel>
+                        <ComponentIndustrial>2</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_22LR_FMJ</defaultProjectile>
+                        <warmupTime>0.3</warmupTime>
+                        <range>10</range>
+                        <soundCast>Shot_Silenced_SMG</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>16</magazineSize>
+                        <reloadTime>1.7</reloadTime>
+                        <ammoSet>AmmoSet_22LR</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>SimpleGun</li>
+                        <li>CE_Sidearm</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
