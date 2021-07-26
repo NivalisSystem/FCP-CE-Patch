@@ -77,7 +77,7 @@
                     <Properties>
                         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                         <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_FN57x28mm_FMJ</defaultProjectile>
+                        <defaultProjectile>Bullet_5mmGRA_FMJ</defaultProjectile>
                         <burstShotCount>8</burstShotCount>
                         <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
                         <warmupTime>1.1</warmupTime>
@@ -90,7 +90,7 @@
                     <AmmoUser>
                         <magazineSize>24</magazineSize>
                         <reloadTime>2</reloadTime>
-                        <ammoSet>AmmoSet_FN57x28mm</ammoSet>
+                        <ammoSet>AmmoSet_5mmGRA</ammoSet>
                     </AmmoUser>
                     <FireModes>
                         <aiAimMode>Snapshot</aiAimMode>
