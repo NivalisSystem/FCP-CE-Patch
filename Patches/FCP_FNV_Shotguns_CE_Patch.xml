@@ -61,7 +61,7 @@
 
                 <!-- Single Shotgun -->
                 <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>VWE_SawedOffShotgun</defName>
+                    <defName>FCP_Gun_Single_Shotgun</defName>
                     <statBases>
                         <WorkToMake>10000</WorkToMake>
                         <Bulk>3.75</Bulk>
@@ -270,7 +270,7 @@
                 </li>
 
                 <!-- Riot Shotgun -->
-                <Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                     <defName>FCP_Gun_Riot_Shotgun</defName>
                     <statBases>
                         <Mass>3.40</Mass>
@@ -306,7 +306,7 @@
                         <li>CE_AI_AssaultWeapon</li>
                     </weaponTags>
                     <researchPrerequisite>GasOperation</researchPrerequisite>
-                </Operation>
+                </li>
 
                 <!-- Lever Action Shotgun -->
                 <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
