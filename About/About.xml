@@ -14,26 +14,6 @@
             <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=1631756268</steamWorkshopUrl>
             <downloadUrl>https://github.com/CombatExtendedRWMod/CombatExtended/releases</downloadUrl>
         </li>
-        <li>
-            <packageId>Rick.FCPFNVPsitols</packageId>
-            <displayName>FCP Fallout New Vegas Pistols!</displayName>
-            <steamWorkshopUrl>steam://url/CommunityFilePage/2543838139</steamWorkshopUrl>
-        </li>
-        <li>
-            <packageId>Rick.FCPFNVLeverActionRifles</packageId>
-            <displayName>FCP Fallout New Vegas Lever Action Rifles!</displayName>
-            <steamWorkshopUrl>steam://url/CommunityFilePage/2538459641</steamWorkshopUrl>
-        </li>
-        <li>
-            <packageId>Rick.FCPFNVARLMG</packageId>
-            <displayName>FCP Fallout New Vegas Assault Rifles and LMG Pack!</displayName>
-            <steamWorkshopUrl>steam://url/CommunityFilePage/2538737483</steamWorkshopUrl>
-        </li>
-        <li>
-            <packageId>Rick.FCPFNVShotguns</packageId>
-            <displayName>FCP Fallout New Vegas Shotguns!</displayName>
-            <steamWorkshopUrl>steam://url/CommunityFilePage/2537976269</steamWorkshopUrl>
-        </li>
     </modDependencies>
     <loadAfter>
         <li>CETeam.CombatExtended</li>
