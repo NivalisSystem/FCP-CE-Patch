@@ -277,7 +277,7 @@
                         <warmupTime>1</warmupTime>
                         <range>80</range>
                         <minRange>5</minRange>
-                        <soundCast>VWE_Shot_GrenadeLauncher</soundCast>
+                        <soundCast>InfernoCannon_Fire</soundCast>
                         <muzzleFlashScale>14</muzzleFlashScale>
                         <recoilAmount>2.93</recoilAmount>
                         <ai_IsBuildingDestroyer>True</ai_IsBuildingDestroyer>
