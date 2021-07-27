@@ -21,5 +21,7 @@
         <li>Rick.FCPFNVLeverActionRifles</li>
         <li>Rick.FCPFNVARLMG</li>
         <li>Rick.FCPFNVShotguns</li>
+        <li>Rick.FCPFNVHeavyWeapons</li>
+        <li>Rick.FCPFNVRevolvers</li>
     </loadAfter>
 </ModMetaData>
