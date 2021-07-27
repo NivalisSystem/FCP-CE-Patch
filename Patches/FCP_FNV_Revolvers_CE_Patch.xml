@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP Fallout New Vegas Revolvers!</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- === Tools === -->
+                <li Class="PatchOperationReplace">
+                    <xpath>
+						/Defs/ThingDef[
+							defName = "FCP_Gun_357_Magnum_Revolver" or 
+							defName = "FCP_Gun_Lucky" or 
+							defName = "FCP_Gun_Police_Revolver" or
+							defName = "FCP_Gun_44_Magnum_Revolver" or
+							defName = "FCP_Gun_Mysterious_Magnum" or
+                            defName = "FCP_Gun_556_Pistol" or 
+                            defName = "FCP_Gun_Hunting_Revolver" or 
+                            defName = "FCP_Gun_Ranger_Sequoia"
+						]/tools
+                    </xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>grip</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>2</power>
+                                <cooldownTime>1.54</cooldownTime>
+                                <chanceFactor>1.5</chanceFactor>
+                                <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>muzzle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>2</power>
+                                <cooldownTime>1.54</cooldownTime>
+                                <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <!-- .357 Revolver -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_357_Magnum_Revolver</defName>
+                    <statBases>
+                        <Mass>1.4</Mass>
+                        <RangedWeapon_Cooldown>0.49</RangedWeapon_Cooldown>
+                        <SightsEfficiency>0.7</SightsEfficiency>
+                        <ShotSpread>0.18</ShotSpread>
+                        <SwayFactor>1.27</SwayFactor>
+                        <Bulk>2.41</Bulk>
+                        <WorkToMake>4000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <ComponentIndustrial>2</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_357Magnum_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>12</range>
+                        <soundCast>Shot_Revolver</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>6</magazineSize>
+                        <reloadOneAtATime>true</reloadOneAtATime>
+                        <reloadTime>0.6</reloadTime>
+                        <ammoSet>AmmoSet_357Magnum</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_Sidearm</li>
+                        <li>CE_AI_Pistol</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>Gunsmithing</researchPrerequisite>
+                </li>
+
+                <!-- FCP_Gun_Lucky -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Lucky</defName>
+                    <statBases>
+                        <Mass>1.39</Mass>
+                        <RangedWeapon_Cooldown>0.32</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.0</SightsEfficiency>
+                        <ShotSpread>0.12</ShotSpread>
+                        <SwayFactor>1.00</SwayFactor>
+                        <Bulk>2.41</Bulk>
+                        <WorkToMake>25000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <ComponentIndustrial>2</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_357Magnum_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>16</range>
+                        <soundCast>Shot_Revolver</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>6</magazineSize>
+                        <reloadOneAtATime>true</reloadOneAtATime>
+                        <reloadTime>0.6</reloadTime>
+                        <ammoSet>AmmoSet_357Magnum</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_Sidearm</li>
+                        <li>CE_AI_Pistol</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>Gunsmithing</researchPrerequisite>
+                </li>
+
+                <!-- FCP_Gun_Police_Revolver -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Police_Revolver</defName>
+                    <statBases>
+                        <Mass>1.39</Mass>
+                        <RangedWeapon_Cooldown>0.49</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.1</SightsEfficiency>
+                        <ShotSpread>0.10</ShotSpread>
+                        <SwayFactor>1.05</SwayFactor>
+                        <Bulk>2.41</Bulk>
+                        <WorkToMake>5000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <ComponentIndustrial>2</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_357Magnum_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>12</range>
+                        <soundCast>Shot_Revolver</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>6</magazineSize>
+                        <reloadTime>3.0</reloadTime>
+                        <ammoSet>AmmoSet_357Magnum</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_Sidearm</li>
+                        <li>CE_AI_Pistol</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>Gunsmithing</researchPrerequisite>
+                </li>
+
+                <!-- .44 Magunum Revolver -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_44_Magnum_Revolver</defName>
+                    <statBases>
+                        <Mass>1.39</Mass>
+                        <RangedWeapon_Cooldown>0.55</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.0</SightsEfficiency>
+                        <ShotSpread>0.12</ShotSpread>
+                        <SwayFactor>1.27</SwayFactor>
+                        <Bulk>2.41</Bulk>
+                        <WorkToMake>5000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>40</Steel>
+                        <ComponentIndustrial>2</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_44Magnum_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>16</range>
+                        <soundCast>Shot_Revolver</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>6</magazineSize>
+                        <reloadTime>3.0</reloadTime>
+                        <ammoSet>AmmoSet_44Magnum</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_Sidearm</li>
+                        <li>CE_AI_Pistol</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>Gunsmithing</researchPrerequisite>
+                </li>
+
+                <!-- .44 Magnum Revolver Uniques -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Mysterious_Magnum</defName>
+                    <statBases>
+                        <Mass>1.39</Mass>
+                        <RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.1</SightsEfficiency>
+                        <ShotSpread>0.10</ShotSpread>
+                        <SwayFactor>1.27</SwayFactor>
+                        <Bulk>2.41</Bulk>
+                        <WorkToMake>5000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Plasteel>50</Plasteel>
+                        <ComponentSpacer>2</ComponentSpacer>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_44Magnum_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>16</range>
+                        <soundCast>Shot_Revolver</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>6</magazineSize>
+                        <reloadTime>3.0</reloadTime>
+                        <ammoSet>AmmoSet_44Magnum</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_Sidearm</li>
+                        <li>CE_AI_Pistol</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>Gunsmithing</researchPrerequisite>
+                </li>
+
+                <!-- 5.56 Pistol -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_556_Pistol</defName>
+                    <statBases>
+                        <Mass>1.39</Mass>
+                        <RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.0</SightsEfficiency>
+                        <ShotSpread>0.15</ShotSpread>
+                        <SwayFactor>1.23</SwayFactor>
+                        <Bulk>2.41</Bulk>
+                        <WorkToMake>6000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>50</Steel>
+                        <ComponentIndustrial>4</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+                        <warmupTime>0.45</warmupTime>
+                        <range>25</range>
+                        <soundCast>Shot_Revolver</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>5</magazineSize>
+                        <reloadTime>2.5</reloadTime>
+                        <ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_Sidearm</li>
+                        <li>CE_AI_Pistol</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>Gunsmithing</researchPrerequisite>
+                </li>
+
+                <!-- Hunting Revolver -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Hunting_Revolver</defName>
+                    <statBases>
+                        <Mass>1.39</Mass>
+                        <RangedWeapon_Cooldown>0.67</RangedWeapon_Cooldown>
+                        <SightsEfficiency>2.46</SightsEfficiency>
+                        <ShotSpread>0.09</ShotSpread>
+                        <SwayFactor>1.25</SwayFactor>
+                        <Bulk>2.41</Bulk>
+                        <WorkToMake>8500</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>40</Steel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_4570Gov_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>35</range>
+                        <soundCast>Shot_Revolver</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>5</magazineSize>
+                        <reloadTime>3.0</reloadTime>
+                        <ammoSet>AmmoSet_4570Gov</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_Sidearm</li>
+                        <li>CE_AI_Pistol</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>Gunsmithing</researchPrerequisite>
+                </li>
+
+                <!-- Hunting Revolver Unique -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Ranger_Sequoia</defName>
+                    <statBases>
+                        <Mass>1.39</Mass>
+                        <RangedWeapon_Cooldown>0.45</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.5</SightsEfficiency>
+                        <ShotSpread>0.09</ShotSpread>
+                        <SwayFactor>1.25</SwayFactor>
+                        <Bulk>2.41</Bulk>
+                        <WorkToMake>10000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>40</Steel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_4570Gov_FMJ</defaultProjectile>
+                        <warmupTime>0.3</warmupTime>
+                        <range>25</range>
+                        <soundCast>Shot_Revolver</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>5</magazineSize>
+                        <reloadTime>2.5</reloadTime>
+                        <ammoSet>AmmoSet_4570Gov</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_Sidearm</li>
+                        <li>CE_AI_Pistol</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>Gunsmithing</researchPrerequisite>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
