@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP Desert Ranger Equipment Teaser</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- === Armor === -->
+
+                <!-- === FCP_DesertRangerCoat === -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_DesertRangerCoat"]/statBases</xpath>
+                    <value>
+                        <Bulk>17</Bulk>
+                        <WornBulk>6</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_DesertRangerCoat"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>14</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_DesertRangerCoat"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>22</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_DesertRangerCoat"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <CarryBulk>20</CarryBulk>
+                            <CarryWeight>25</CarryWeight>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+                <!-- === FCP_Apparel_Elite_Riot_Armor === -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Elite_Riot_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>20</Bulk>
+                        <WornBulk>8</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Elite_Riot_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>16</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Elite_Riot_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>25</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Elite_Riot_Armor"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <CarryBulk>20</CarryBulk>
+                            <CarryWeight>25</CarryWeight>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+                <!-- === FCP_Apparel_Ranger_Armor === -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Ranger_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>17</Bulk>
+                        <WornBulk>6</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Ranger_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>14</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Ranger_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>22</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Ranger_Armor"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <CarryBulk>15</CarryBulk>
+                            <CarryWeight>5</CarryWeight>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+                <!-- === Clothes === -->
+
+                <!-- === FCP_Apparel_Ranger_Scout_Fatigues === -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Ranger_Scout_Fatigues"]/statBases</xpath>
+                    <value>
+                        <Bulk>8</Bulk>
+                        <WornBulk>3</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Ranger_Scout_Fatigues"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Ranger_Scout_Fatigues"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>14</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Ranger_Scout_Fatigues"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <CarryBulk>15</CarryBulk>
+                            <CarryWeight>5</CarryWeight>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+                <!-- === FCP_Apparel_Yao_Guai_Poncho === -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Yao_Guai_Poncho"]/statBases</xpath>
+                    <value>
+                        <Bulk>12</Bulk>
+                        <WornBulk>6</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Yao_Guai_Poncho"]/statBases</xpath>
+                    <value>
+                        <ArmorRating_Sharp>2</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Yao_Guai_Poncho"]/statBases</xpath>
+                    <value>
+                        <ArmorRating_Blunt>14</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- === Helmets === -->
+
+                <!-- === FCP_Apparel_Desert_Ranger_Helm === -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Desert_Ranger_Helm"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Desert_Ranger_Helm"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>14</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Desert_Ranger_Helm"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>22</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- === FCP_Apparel_Elite_Riot_Helmet === -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Elite_Riot_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                 <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Elite_Riot_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>16</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Elite_Riot_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>25</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- === FCP_Apparel_Ranger_Scout_Helmet === -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Ranger_Scout_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Ranger_Scout_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>9</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Ranger_Scout_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>14</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- === FCP_Ranger_Flak_Helmet === -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Ranger_Flak_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Ranger_Flak_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>9</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Ranger_Flak_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>14</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
