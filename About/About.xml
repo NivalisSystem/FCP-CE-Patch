@@ -23,5 +23,6 @@
         <li>Rick.FCPFNVShotguns</li>
         <li>Rick.FCPFNVHeavyWeapons</li>
         <li>Rick.FCPFNVRevolvers</li>
+        <li>Rick.FCPFNVSMG</li>
     </loadAfter>
 </ModMetaData>

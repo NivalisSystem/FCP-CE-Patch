@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP Fallout New Vegas Submachine Guns!</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- === Tools === -->
+                <li Class="PatchOperationReplace">
+                    <xpath>
+						/Defs/ThingDef[
+							defName = "FCP_Gun_Silenced_22_SMG" or 
+							defName = "FCP_Gun_45_Auto_SMG" or 
+							defName = "FCP_Gun_9mm_SMG" or
+							defName = "FCP_Gun_Vances_9mm_SMG" or
+							defName = "FCP_Gun_10mmSMG" or
+                            defName = "FCP_Gun_125mm_SMG" or 
+                            defName = "FCP_Gun_HH_Tools_Nailgun"
+						]/tools
+                    </xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>stock</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <chanceFactor>1.5</chanceFactor>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>barrel</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>5</power>
+                                <cooldownTime>2.02</cooldownTime>
+                                <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>muzzle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <!-- Silenced .22 SMG -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Silenced_22_SMG</defName>
+                    <statBases>
+                        <Mass>2.50</Mass>
+                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.00</SightsEfficiency>
+                        <ShotSpread>0.22</ShotSpread>
+                        <SwayFactor>0.94</SwayFactor>
+                        <Bulk>4.50</Bulk>
+                        <WorkToMake>14000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <Chemfuel>10</Chemfuel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <recoilAmount>2.08</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_22LR_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>22</range>
+                        <burstShotCount>20</burstShotCount>
+                        <ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+                        <soundCast>Shot_Silenced_SMG</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>180</magazineSize>
+                        <reloadTime>2.3</reloadTime>
+                        <ammoSet>AmmoSet_22LR</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aimedBurstShotCount>10</aimedBurstShotCount>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_SMG</li>
+                        <li>CE_AI_AssaultWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                </li>
+
+                <!-- .45 Auto SMG -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_45_Auto_SMG</defName>
+                    <statBases>
+                        <Mass>2.50</Mass>
+                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.00</SightsEfficiency>
+                        <ShotSpread>0.14</ShotSpread>
+                        <SwayFactor>0.94</SwayFactor>
+                        <Bulk>4.50</Bulk>
+                        <WorkToMake>20000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <Chemfuel>10</Chemfuel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <recoilAmount>2.08</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>25</range>
+                        <burstShotCount>6</burstShotCount>
+                        <ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+                        <soundCast>Shot_HeavySMG</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>30</magazineSize>
+                        <reloadTime>4</reloadTime>
+                        <ammoSet>AmmoSet_45ACP</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aimedBurstShotCount>3</aimedBurstShotCount>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_SMG</li>
+                        <li>CE_AI_AssaultWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                </li>
+
+
+                <!-- 9mm SMG -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_9mm_SMG</defName>
+                    <statBases>
+                        <Mass>2.50</Mass>
+                        <RangedWeapon_Cooldown>0.30</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.00</SightsEfficiency>
+                        <ShotSpread>0.14</ShotSpread>
+                        <SwayFactor>0.94</SwayFactor>
+                        <Bulk>4.50</Bulk>
+                        <WorkToMake>19000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <Chemfuel>10</Chemfuel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <recoilAmount>2.08</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_9x19mmPara_FMJ</defaultProjectile>
+                        <warmupTime>0.52</warmupTime>
+                        <range>25</range>
+                        <burstShotCount>10</burstShotCount>
+                        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                        <soundCast>Shot_HeavySMG</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>30</magazineSize>
+                        <reloadTime>2.2</reloadTime>
+                        <ammoSet>AmmoSet_9x19mmPara</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aimedBurstShotCount>5</aimedBurstShotCount>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_SMG</li>
+                        <li>CE_AI_AssaultWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                </li>
+
+                <!-- 9mm SMG Unique -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Vances_9mm_SMG</defName>
+                    <statBases>
+                        <Mass>2.50</Mass>
+                        <RangedWeapon_Cooldown>0.25</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.20</SightsEfficiency>
+                        <ShotSpread>0.10</ShotSpread>
+                        <SwayFactor>0.80</SwayFactor>
+                        <Bulk>4.50</Bulk>
+                        <WorkToMake>50000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <Chemfuel>10</Chemfuel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <recoilAmount>2.08</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_9x19mmPara_FMJ</defaultProjectile>
+                        <warmupTime>0.46</warmupTime>
+                        <range>26</range>
+                        <burstShotCount>10</burstShotCount>
+                        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                        <soundCast>Shot_HeavySMG</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>60</magazineSize>
+                        <reloadTime>2.7</reloadTime>
+                        <ammoSet>AmmoSet_9x19mmPara</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aimedBurstShotCount>5</aimedBurstShotCount>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_SMG</li>
+                        <li>CE_AI_AssaultWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                </li>
+
+
+
+                <!-- 10mm SMG -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_10mmSMG</defName>
+                    <statBases>
+                        <Mass>2.50</Mass>
+                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.10</SightsEfficiency>
+                        <ShotSpread>0.14</ShotSpread>
+                        <SwayFactor>0.94</SwayFactor>
+                        <Bulk>4.50</Bulk>
+                        <WorkToMake>28000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>75</Steel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <recoilAmount>2.08</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_10mmAuto_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>25</range>
+                        <burstShotCount>10</burstShotCount>
+                        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+                        <soundCast>Shot_HeavySMG</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>30</magazineSize>
+                        <reloadTime>2.7</reloadTime>
+                        <ammoSet>AmmoSet_10mmAuto</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aimedBurstShotCount>5</aimedBurstShotCount>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_SMG</li>
+                        <li>CE_AI_AssaultWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                </li>
+
+                <!-- 10mm SMG Unique -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Sleepy_Time</defName>
+                    <statBases>
+                        <Mass>2.50</Mass>
+                        <RangedWeapon_Cooldown>0.30</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.10</SightsEfficiency>
+                        <ShotSpread>0.14</ShotSpread>
+                        <SwayFactor>0.94</SwayFactor>
+                        <Bulk>4.50</Bulk>
+                        <WorkToMake>50000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>75</Steel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <recoilAmount>2.08</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_10mmAuto_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>25</range>
+                        <burstShotCount>10</burstShotCount>
+                        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+                        <soundCast>Shot_Silenced_SMG</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>40</magazineSize>
+                        <reloadTime>2.7</reloadTime>
+                        <ammoSet>AmmoSet_10mmAuto</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aimedBurstShotCount>5</aimedBurstShotCount>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_SMG</li>
+                        <li>CE_AI_AssaultWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                </li>
+
+                <!-- 12.7mm SMG -->
+                <!-- Labled as 12.5mm shoudl be 12.7 (.50 cal) -->
+                <li Class="PatchOperationReplace">
+                    <xpath>
+						/Defs/ThingDef[defName = "FCP_Gun_125mm_SMG"]/label
+                    </xpath>
+                    <value>
+                        <label>12.7mm SMG</label>
+                    </value>
+                </li>
+
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_125mm_SMG</defName>
+                    <statBases>
+                        <Mass>2.50</Mass>
+                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.00</SightsEfficiency>
+                        <ShotSpread>0.14</ShotSpread>
+                        <SwayFactor>0.94</SwayFactor>
+                        <Bulk>4.50</Bulk>
+                        <WorkToMake>26000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <Chemfuel>10</Chemfuel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <recoilAmount>2.08</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_50AE_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>35</range>
+                        <burstShotCount>7</burstShotCount>
+                        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+                        <soundCast>Shot_HeavySMG</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>21</magazineSize>
+                        <reloadTime>4</reloadTime>
+                        <ammoSet>AmmoSet_50AE</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aimedBurstShotCount>3</aimedBurstShotCount>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_SMG</li>
+                        <li>CE_AI_AssaultWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                </li>
+
+                <!-- H&H Tools Nail Gun -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_HH_Tools_Nailgun</defName>
+                    <statBases>
+                        <Mass>2.50</Mass>
+                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.00</SightsEfficiency>
+                        <ShotSpread>0.14</ShotSpread>
+                        <SwayFactor>0.94</SwayFactor>
+                        <Bulk>4.50</Bulk>
+                        <WorkToMake>24500</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <Chemfuel>10</Chemfuel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <recoilAmount>2.08</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_Nail_FMJ</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>25</range>
+                        <burstShotCount>6</burstShotCount>
+                        <ticksBetweenBurstShots>18</ticksBetweenBurstShots>
+                        <soundCast>Shot_Nailgun</soundCast>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>90</magazineSize>
+                        <reloadTime>4</reloadTime>
+                        <ammoSet>AmmoSet_Nail</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aimedBurstShotCount>3</aimedBurstShotCount>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_SMG</li>
+                        <li>CE_AI_AssaultWeapon</li>
+                    </weaponTags>
+                    <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
