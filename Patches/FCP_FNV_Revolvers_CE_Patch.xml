@@ -282,7 +282,7 @@
                         <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
                         <warmupTime>0.45</warmupTime>
                         <range>25</range>
-                        <soundCast>Shot_Revolver</soundCast>
+                        <soundCast>Shot_Autopistol</soundCast>
                         <soundCastTail>GunTail_Light</soundCastTail>
                         <muzzleFlashScale>9</muzzleFlashScale>
                     </Properties>
