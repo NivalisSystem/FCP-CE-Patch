@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>Ammo5mmGRA</defName>
+		<label>5mm GRA</label>
+		<parent>AmmoRifles</parent>
+		<iconPath>UI/Icons/ThingCategories/CaliberRifle</iconPath>
+	</ThingCategoryDef>
+
+	<!-- ==================== AmmoSet ========================== -->
+
+	<CombatExtended.AmmoSetDef>
+		<defName>AmmoSet_5mmGRA</defName>
+		<label>5mm GRA</label>
+		<ammoTypes>
+			<Ammo_5mmGRA_FMJ>Bullet_5mmGRA_FMJ</Ammo_5mmGRA_FMJ>
+			<Ammo_5mmGRA_AP>Bullet_5mmGRA_AP</Ammo_5mmGRA_AP>
+			<Ammo_5mmGRA_HP>Bullet_5mmGRA_HP</Ammo_5mmGRA_HP>
+		    <Ammo_5mmGRA_Incendiary>Bullet_5mmGRA_Incendiary</Ammo_5mmGRA_Incendiary>
+			<Ammo_5mmGRA_HE>Bullet_5mmGRA_HE</Ammo_5mmGRA_HE>
+			<Ammo_5mmGRA_Sabot>Bullet_5mmGRA_Sabot</Ammo_5mmGRA_Sabot>				
+		</ammoTypes>
+	</CombatExtended.AmmoSetDef>
+
+	<!-- ==================== Ammo ========================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="5mmGRABase" ParentName="SmallAmmoBase" Abstract="True">
+		<description>The 5mm round is a small caliber high velocity rifle cartridge.</description>
+		<statBases>
+			<Mass>0.02</Mass>
+			<Bulk>0.025</Bulk>
+		</statBases>
+		<tradeTags>
+			<li>CE_AutoEnableTrade</li>
+			<li>CE_AutoEnableCrafting</li>
+		</tradeTags>
+		<thingCategories>
+			<li>Ammo5mmGRA</li>
+		</thingCategories>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="5mmGRABase">
+		<defName>Ammo_5mmGRA_FMJ</defName>
+		<label>5mm GRA cartridge (FMJ)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/FMJ</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.11</MarketValue>
+		</statBases>
+		<ammoClass>FullMetalJacket</ammoClass>
+		<cookOffProjectile>Bullet_5mmGRA_FMJ</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="5mmGRABase">
+		<defName>Ammo_5mmGRA_AP</defName>
+		<label>5mm GRA cartridge (AP)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/AP</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.11</MarketValue>
+		</statBases>
+		<ammoClass>ArmorPiercing</ammoClass>
+		<cookOffProjectile>Bullet_5mmGRA_AP</cookOffProjectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="5mmGRABase">
+		<defName>Ammo_5mmGRA_HP</defName>
+		<label>5mm GRA cartridge (HP)</label>
+		<graphicData>
+			<texPath>Things/Ammo/Rifle/HP</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>0.11</MarketValue>
+		</statBases>
+		<ammoClass>HollowPoint</ammoClass>
+		<cookOffProjectile>Bullet_5mmGRA_HP</cookOffProjectile>
+	</ThingDef>
+	
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="5mmGRABase">
+    <defName>Ammo_5mmGRA_Incendiary</defName>
+    <label>5mm GRA cartridge (AP-I)</label>
+    <graphicData>
+      <texPath>Things/Ammo/Rifle/Incendiary</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.15</MarketValue>
+    </statBases>
+    <ammoClass>IncendiaryAP</ammoClass>
+    <cookOffProjectile>Bullet_5mmGRA_Incendiary</cookOffProjectile>
+  </ThingDef>
+
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="5mmGRABase">
+    <defName>Ammo_5mmGRA_HE</defName>
+    <label>5mm GRA cartridge (HE)</label>
+    <graphicData>
+      <texPath>Things/Ammo/Rifle/HE</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.21</MarketValue>
+    </statBases>
+    <ammoClass>ExplosiveAP</ammoClass>
+    <cookOffProjectile>Bullet_5mmGRA_HE</cookOffProjectile>
+  </ThingDef>
+ 
+  <ThingDef Class="CombatExtended.AmmoDef" ParentName="5mmGRABase">
+    <defName>Ammo_5mmGRA_Sabot</defName>
+    <label>5mm GRA cartridge (Sabot)</label>
+    <graphicData>
+      <texPath>Things/Ammo/Rifle/Sabot</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MarketValue>0.12</MarketValue>
+	  <Mass>0.02</Mass>
+    </statBases>
+    <ammoClass>Sabot</ammoClass>
+    <cookOffProjectile>Bullet_5mmGRA_Sabot</cookOffProjectile>
+  </ThingDef>
+	<!-- ================== Projectiles ================== -->
+
+	<ThingDef Class="CombatExtended.AmmoDef" Name="Base5mmGRABullet" ParentName="BaseBullet" Abstract="true">
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_Small</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageDef>Bullet</damageDef>
+			<speed>172</speed>
+			<dropsCasings>true</dropsCasings>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base5mmGRABullet">
+		<defName>Bullet_5mmGRA_FMJ</defName>
+		<label>5mm GRA bullet (FMJ)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>20</damageAmountBase>
+			<armorPenetrationSharp>7</armorPenetrationSharp>
+			<armorPenetrationBlunt>66.72</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base5mmGRABullet">
+		<defName>Bullet_5mmGRA_AP</defName>
+		<label>5mm GRA bullet (AP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>12</damageAmountBase>
+			<armorPenetrationSharp>14</armorPenetrationSharp>
+			<armorPenetrationBlunt>66.72</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	<ThingDef Class="CombatExtended.AmmoDef" ParentName="Base5mmGRABullet">
+		<defName>Bullet_5mmGRA_HP</defName>
+		<label>5mm GRA bullet (HP)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+			<damageAmountBase>25</damageAmountBase>
+			<armorPenetrationSharp>4</armorPenetrationSharp>
+			<armorPenetrationBlunt>66.72</armorPenetrationBlunt>
+		</projectile>
+	</ThingDef>
+
+	  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base5mmGRABullet">
+		<defName>Bullet_5mmGRA_Incendiary</defName>
+		<label>5mm GRA bullet (AP-I)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+		  <damageAmountBase>12</damageAmountBase>
+		  <armorPenetrationSharp>14</armorPenetrationSharp>
+		  <armorPenetrationBlunt>66.72</armorPenetrationBlunt>
+		  <secondaryDamage>
+				<li>
+			  	<def>Flame_Secondary</def>
+			  	<amount>8</amount>
+				</li>
+		  </secondaryDamage>
+		</projectile>
+	  </ThingDef>
+	  
+	  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base5mmGRABullet">
+		<defName>Bullet_5mmGRA_HE</defName>
+		<label>5mm GRA bullet (HE)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+		  <damageAmountBase>10</damageAmountBase>
+		  <armorPenetrationSharp>7</armorPenetrationSharp>
+		  <armorPenetrationBlunt>66.72</armorPenetrationBlunt>
+		  <secondaryDamage>
+				<li>
+			  	<def>Bomb_Secondary</def>
+			  	<amount>12</amount>
+				</li>
+		  </secondaryDamage>
+		</projectile>
+	  </ThingDef>
+
+	  <ThingDef Class="CombatExtended.AmmoDef" ParentName="Base5mmGRABullet">
+		<defName>Bullet_5mmGRA_Sabot</defName>
+		<label>5mm GRA bullet (Sabot)</label>
+		<projectile Class="CombatExtended.ProjectilePropertiesCE">
+		  <damageAmountBase>10</damageAmountBase>
+		  <armorPenetrationSharp>25</armorPenetrationSharp>
+		  <armorPenetrationBlunt>86.28</armorPenetrationBlunt>
+		  <speed>252</speed>
+		</projectile>
+	  </ThingDef>
+  
+	<!-- ==================== Recipes ========================== -->
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_5mmGRA_FMJ</defName>
+		<label>make 5mm GRA (FMJ) cartridge x500</label>
+		<description>Craft 500 5mm GRA (FMJ) cartridges.</description>
+		<jobString>Making 5mm GRA (FMJ) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>26</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_5mmGRA_FMJ>500</Ammo_5mmGRA_FMJ>
+		</products>
+	<workAmount>2600</workAmount>		
+	</RecipeDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_5mmGRA_AP</defName>
+		<label>make 5mm GRA (AP) cartridge x500</label>
+		<description>Craft 500 5mm GRA (AP) cartridges.</description>
+		<jobString>Making 5mm GRA (AP) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>26</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_5mmGRA_AP>500</Ammo_5mmGRA_AP>
+		</products>
+	<workAmount>2600</workAmount>		
+	</RecipeDef>
+
+	<RecipeDef ParentName="AmmoRecipeBase">
+		<defName>MakeAmmo_5mmGRA_HP</defName>
+		<label>make 5mm GRA (HP) cartridge x500</label>
+		<description>Craft 500 5mm GRA (HP) cartridges.</description>
+		<jobString>Making 5mm GRA (HP) cartridges.</jobString>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Steel</li>
+					</thingDefs>
+				</filter>
+				<count>26</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Steel</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Ammo_5mmGRA_HP>500</Ammo_5mmGRA_HP>
+		</products>
+	<workAmount>2600</workAmount>		
+	</RecipeDef>
+
+  <RecipeDef ParentName="AdvancedAmmoRecipeBase">
+    <defName>MakeAmmo_5mmGRA_Incendiary</defName>
+    <label>make 5mm GRA (AP-I) cartridge x500</label>
+    <description>Craft 500 5mm GRA (AP-I) cartridges.</description>
+    <jobString>Making 5mm GRA (AP-I) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>26</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Prometheum</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>Prometheum</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_5mmGRA_Incendiary>500</Ammo_5mmGRA_Incendiary>
+    </products>
+    <workAmount>3800</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AdvancedAmmoRecipeBase">
+    <defName>MakeAmmo_5mmGRA_HE</defName>
+    <label>make 5mm GRA (HE) cartridge x500</label>
+    <description>Craft 500 5mm GRA (HE) cartridges.</description>
+    <jobString>Making 5mm GRA (HE) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>26</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FSX</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>FSX</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_5mmGRA_HE>500</Ammo_5mmGRA_HE>
+    </products>
+    <workAmount>4600</workAmount>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="AdvancedAmmoRecipeBase">
+    <defName>MakeAmmo_5mmGRA_Sabot</defName>
+    <label>make 5mm GRA (Sabot) cartridge x500</label>
+    <description>Craft 500 5mm GRA (Sabot) cartridges.</description>
+    <jobString>Making 5mm GRA (Sabot) cartridges.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </filter>
+        <count>16</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Uranium</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Chemfuel</li>
+          </thingDefs>
+        </filter>
+        <count>3</count>
+      </li>		  
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Steel</li>
+        <li>Uranium</li>
+        <li>Chemfuel</li>		
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Ammo_5mmGRA_Sabot>500</Ammo_5mmGRA_Sabot>
+    </products>
+    <workAmount>3400</workAmount>
+  </RecipeDef>
+  
+</Defs>
