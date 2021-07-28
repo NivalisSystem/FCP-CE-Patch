@@ -75,7 +75,7 @@
                     <Properties>
                         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                         <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_22Short_FMJ</defaultProjectile>
+                        <defaultProjectile>Bullet_BB_FMJ</defaultProjectile>
                         <warmupTime>0.3</warmupTime>
                         <range>8</range>
                         <soundCast>Shot_BB_Gun</soundCast>
@@ -84,7 +84,7 @@
                     <AmmoUser>
                         <magazineSize>25</magazineSize>
                         <reloadTime>1.5</reloadTime>
-                        <ammoSet>AmmoSet_22Short</ammoSet>
+                        <ammoSet>AmmoSet_BB</ammoSet>
                         <reloadOneAtATime>false</reloadOneAtATime>
                     </AmmoUser>
                     <FireModes>
@@ -111,7 +111,7 @@
                     <Properties>
                         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                         <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_22Short_FMJ</defaultProjectile>
+                        <defaultProjectile>Bullet_BB_FMJ</defaultProjectile>
                         <warmupTime>0.25</warmupTime>
                         <range>12</range>
                         <soundCast>Shot_BB_Gun</soundCast>
@@ -120,7 +120,7 @@
                     <AmmoUser>
                         <magazineSize>35</magazineSize>
                         <reloadTime>1.2</reloadTime>
-                        <ammoSet>AmmoSet_22Short</ammoSet>
+                        <ammoSet>AmmoSet_BB</ammoSet>
                         <reloadOneAtATime>false</reloadOneAtATime>
                     </AmmoUser>
                     <FireModes>
