@@ -46,7 +46,30 @@
                     </value>
                 </li>
 
+                <li Class="PatchOperationReplace">
+
+                    <xpath>
+						/Defs/ThingDef[
+							defName = "FCP_Gun_Minigun" or
+							defName = "FCP_Gun_CZ57_Avenger" or
+							defName = "FCP_Gun_K9000_Cyberdog_Gun" or
+							defName = "FCP_Gun_FIDO" or 
+							defName = "FCP_Gun_Shoulder_Mounted_Machine_Gun"
+						]/recipeMaker
+                    </xpath>
+                    <value>
+                        <recipeMaker>
+                            <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+                            <skillRequirements>
+                                <Crafting>7</Crafting>
+                            </skillRequirements>
+                        </recipeMaker>
+                    </value>
+                </li>
+
                 <!-- Minigun -->
+
+
                 <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
                     <defName>FCP_Gun_Minigun</defName>
                     <statBases>
