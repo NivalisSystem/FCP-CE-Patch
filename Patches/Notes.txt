@@ -1,0 +1,5 @@
+If using Desert Ranger mod, make sure to load the mods listed bellow, as they are defined in both the standalone packs, and part of the DR mod.
+In addition, to avoid creating a new ammo type right now (this all takes a lot of effort...), I'm using the "Vanilla Weapons Expanded - Laser" mod to provide the ammo for the Ranger Laser Rifle.
+I will Change this in the future, but for now, make sure Vanilla Weapons Expanded - Laser is loaded, and it's requirements. VWE - Laser has a CE patch built into CE itself.
+
+Mods to load alongside DR: FCP FNV Revolvers, FCP FNV Assault Rifles and LMGs, VWE - Laser
