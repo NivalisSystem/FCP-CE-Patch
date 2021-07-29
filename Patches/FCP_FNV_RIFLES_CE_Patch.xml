@@ -13,7 +13,6 @@
 						/Defs/ThingDef[
 							defName = "FCP_Gun_Assault_Carbine" or
 							defName = "FCP_Gun_Marksman_Carbine" or
-							defName = "FCP_Gun_All-American" or
 							defName = "FCP_Gun_Service_Rifle" or 
 							defName = "FCP_Gun_Survivalist_Rifle" or
                             defName = "FCP_Gun_Light_Machine_Gun" or
@@ -128,52 +127,6 @@
                         <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
                         <warmupTime>1.1</warmupTime>
                         <range>55</range>
-                        <soundCast>Shot_AssaultRifle</soundCast>
-                        <soundCastTail>GunTail_Medium</soundCastTail>
-                        <muzzleFlashScale>9</muzzleFlashScale>
-                        <recoilAmount>2.12</recoilAmount>
-                    </Properties>
-                    <AmmoUser>
-                        <magazineSize>20</magazineSize>
-                        <reloadTime>2</reloadTime>
-                        <ammoSet>AmmoSet_556x45mmNATO</ammoSet>
-                    </AmmoUser>
-                    <FireModes>
-                        <aiAimMode>Snapshot</aiAimMode>
-                        <aiUseBurstMode>True</aiUseBurstMode>
-                        <aimedBurstShotCount>2</aimedBurstShotCount>
-                    </FireModes>
-                    <weaponTags>
-                        <li>IndustrialGunAdvanced</li>
-                    </weaponTags>
-                    <!-- Required Research Rework -->
-                    <researchPrerequisite>PrecisionRifling</researchPrerequisite>
-                </li>
-
-                <!-- Marksman Carbine Unique -->
-                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>FCP_Gun_All-American</defName>
-                    <statBases>
-                        <WorkToMake>80000</WorkToMake>
-                        <Mass>6</Mass>
-                        <Bulk>12.00</Bulk>
-                        <SwayFactor>1.1</SwayFactor>
-                        <ShotSpread>0.03</ShotSpread>
-                        <SightsEfficiency>2.5</SightsEfficiency>
-                        <RangedWeapon_Cooldown>0.30</RangedWeapon_Cooldown>
-                    </statBases>
-                    <costList>
-                        <Plasteel>50</Plasteel>
-                        <ComponentIndustrial>5</ComponentIndustrial>
-                    </costList>
-                    <Properties>
-                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
-                        <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
-                        <burstShotCount>4</burstShotCount>
-                        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
-                        <warmupTime>1.1</warmupTime>
-                        <range>60</range>
                         <soundCast>Shot_AssaultRifle</soundCast>
                         <soundCastTail>GunTail_Medium</soundCastTail>
                         <muzzleFlashScale>9</muzzleFlashScale>
@@ -446,8 +399,105 @@
                     <researchPrerequisite>GasOperation</researchPrerequisite>
                     <AllowWithRunAndGun>false</AllowWithRunAndGun>
                 </li>
+
             </operations>
         </match>
+    </Operation>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP US Army Equipment Teaser</li>
+        </mods>
+        <nomatch Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName = "FCP_Gun_All-American"]/tools</xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>stock</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <chanceFactor>1.5</chanceFactor>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>barrel</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>5</power>
+                                <cooldownTime>2.02</cooldownTime>
+                                <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>muzzle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <!-- Marksman Carbine Unique -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_All-American</defName>
+                    <statBases>
+                        <WorkToMake>80000</WorkToMake>
+                        <Mass>6</Mass>
+                        <Bulk>12.00</Bulk>
+                        <SwayFactor>1.1</SwayFactor>
+                        <ShotSpread>0.03</ShotSpread>
+                        <SightsEfficiency>2.5</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.30</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Plasteel>50</Plasteel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+                        <burstShotCount>4</burstShotCount>
+                        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+                        <warmupTime>1.1</warmupTime>
+                        <range>60</range>
+                        <soundCast>Shot_AssaultRifle</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                        <recoilAmount>2.12</recoilAmount>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>20</magazineSize>
+                        <reloadTime>2</reloadTime>
+                        <ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                        <aiUseBurstMode>True</aiUseBurstMode>
+                        <aimedBurstShotCount>2</aimedBurstShotCount>
+                    </FireModes>
+                    <weaponTags>
+                        <li>IndustrialGunAdvanced</li>
+                    </weaponTags>
+                    <!-- Required Research Rework -->
+                    <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+                </li>
+
+            </operations>
+        </nomatch>
     </Operation>
 
 </Patch>
