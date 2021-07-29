@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+        <defName>AmmoFCPRocket</defName>
+        <label></label>
+        <parent>AmmoRockets</parent>
+        <iconPath>UI/Icons/ThingCategories/CaliberRocket</iconPath>
+    </ThingCategoryDef>
+
+    <!-- ==================== AmmoSet ========================== -->
+
+    <CombatExtended.AmmoSetDef>
+        <defName>AmmoSet_FCPRocket</defName>
+        <label>Red Glare Rocket</label>
+        <ammoTypes>
+            <Ammo_FCPRocket_HE>Bullet_FCPRocket_HE</Ammo_FCPRocket_HE>
+            <Ammo_FCPRocket_INC>Bullet_FCPRocket_INC</Ammo_FCPRocket_INC>
+        </ammoTypes>
+    </CombatExtended.AmmoSetDef>
+
+    <!-- ==================== Ammo ========================== -->
+
+    <ThingDef Class="CombatExtended.AmmoDef" Name="FCPRocketBase" ParentName="AmmoBase" Abstract="True">
+        <description>A self propelled projectile armed with a high explosive charge, these are used solely by the Divide's signature weapon, the Red Glare.</description>
+        <statBases>
+            <MaxHitPoints>150</MaxHitPoints>
+        </statBases>
+        <tradeTags>
+            <li>CE_AutoEnableTrade</li>
+            <li>CE_AutoEnableCrafting_TableMachining</li>
+        </tradeTags>
+        <thingCategories>
+            <li>AmmoFCPRocket</li>
+        </thingCategories>
+        <stackLimit>4000</stackLimit>
+        <cookOffFlashScale>25</cookOffFlashScale>
+        <cookOffSound>MortarBomb_Explode</cookOffSound>
+    </ThingDef>
+
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="FCPRocketBase">
+        <defName>Ammo_FCPRocket_HE</defName>
+        <label>Red Glare Rocket (HE)</label>
+        <graphicData>
+            <texPath>Things/Ammo/RPG/Frag</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>14.83</MarketValue>
+            <Mass>0.12</Mass>
+            <Bulk>0.16</Bulk>
+        </statBases>
+        <ammoClass>GrenadeHE</ammoClass>
+        <detonateProjectile>Bullet_FCPRocket_HE</detonateProjectile>
+    </ThingDef>
+
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="FCPRocketBase">
+        <defName>Ammo_FCPRocket_INC</defName>
+        <label>Red Glare Rocket (Incendiary)</label>
+        <graphicData>
+            <texPath>Things/Ammo/RPG/Thermobaric</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>14.83</MarketValue>
+            <Mass>0.12</Mass>
+            <Bulk>0.16</Bulk>
+        </statBases>
+        <ammoClass>RocketThermobaric</ammoClass>
+        <detonateProjectile>Bullet_FCPRocket_INC</detonateProjectile>
+    </ThingDef>
+
+    <!-- ================== Projectiles ================== -->
+
+    <ThingDef Class="CombatExtended.AmmoDef" Name="BaseFCPRocket" ParentName="BaseBullet" Abstract="true">
+        <graphicData>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <speed>70</speed>
+            <soundAmbient>RocketPropelledLoop_Small</soundAmbient>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseFCPRocket">
+        <defName>Bullet_FCPRocket_HE</defName>
+        <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+        <label>Red Glare Rocket rocket (HE)</label>
+        <graphicData>
+            <texPath>Things/Projectiles/Rocket_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>65</damageAmountBase>
+            <explosionRadius>1</explosionRadius>
+        </projectile>
+        <comps>
+            <li Class="CombatExtended.CompProperties_Fragments">
+                <fragments>
+                    <Fragment_Large>1</Fragment_Large>
+                    <Fragment_Small>3</Fragment_Small>
+                </fragments>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseFCPRocket">
+        <defName>Bullet_FCPRocket_INC</defName>
+        <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+        <label>Red Glare Rocket rocket (Incendiary)</label>
+        <graphicData>
+            <texPath>Things/Projectiles/Rocket_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <explosionRadius>1.5</explosionRadius>
+            <damageDef>Thermobaric</damageDef>
+            <damageAmountBase>45</damageAmountBase>
+            <armorPenetrationSharp>0</armorPenetrationSharp>
+            <armorPenetrationBlunt>0</armorPenetrationBlunt>
+            <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+            <ai_IsIncendiary>true</ai_IsIncendiary>
+        </projectile>
+    </ThingDef>
+
+    <!-- ==================== Recipes ========================== -->
+
+    <RecipeDef ParentName="AmmoRecipeBase">
+        <defName>MakeAmmo_FCPRocket_HE</defName>
+        <label>make Red Glare HE rockets x10</label>
+        <description>Craft 10 Red Glare HE rockets.</description>
+        <jobString>Making Red Glare HE rockets.</jobString>
+        <workAmount>3200</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FSX</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Steel</li>
+                <li>FSX</li>
+                <li>ComponentIndustrial</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Ammo_FCPRocket_HE>10</Ammo_FCPRocket_HE>
+        </products>
+    </RecipeDef>
+
+    <RecipeDef ParentName="AmmoRecipeBase">
+        <defName>MakeAmmo_FCPRocket_INC</defName>
+        <label>make Red Glare INC rockets x10</label>
+        <description>Craft 10 Red Glare INC rockets.</description>
+        <jobString>Making Red Glare INC rockets.</jobString>
+        <workAmount>3200</workAmount>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>FSX</li>
+                    </thingDefs>
+                </filter>
+                <count>1</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Steel</li>
+                <li>FSX</li>
+                <li>ComponentIndustrial</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Ammo_FCPRocket_INC>10</Ammo_FCPRocket_INC>
+        </products>
+    </RecipeDef>
+
+</Defs>
