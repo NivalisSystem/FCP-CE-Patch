@@ -66,17 +66,11 @@ Vault-Tec - Handy things for your vault!
 FCP Children of Atom Equipment Teaser
 FCP Classic Combat Armor Teaser
 FCP Great Khan Equipment Teaser
-
 FCP Institute and Railroad Teaser
-
 FCP Makeshift Weapons Pack
-
 FCP Chinese Remnant Equipment Teaser
-
 FCP Raider Armor and Apparel Teaser
-
 FCP Minuteman Equipment Teaser
-
 
 [b]Done![/b]
 [strike]FCP Fallout New Vegas Pistols![/strike]
@@ -89,4 +83,3 @@ FCP Minuteman Equipment Teaser
 [strike]FCP Desert Ranger Equipment Teaser[/strike]
 [strike]FCP US Army Equipment Teaser[/strike]
 [strike]FCP Fallout Creation Club Rifle Pack![/strike]
-
