@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+        <defName>AmmoMFCell</defName>
+        <label>microfusion cell</label>
+        <parent>AmmoAdvanced</parent>
+        <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+
+    <!-- ==================== AmmoSet ========================== -->
+
+    <!-- ==================== Ammo ========================== -->
+
+    <ThingDef Class="CombatExtended.AmmoDef" Name="MFCellBase" ParentName="SpacerSmallAmmoBase" Abstract="True">
+        <description>The microfusion cell model No. 1040 MFC, a medium-sized energy production unit, is a self-contained fusion plant with an output of 1040.8 VDC used as ammunition for energy weapons.</description>
+        <statBases>
+            <Mass>0.008</Mass>
+            <Bulk>0.01</Bulk>
+        </statBases>
+        <tradeTags>
+            <li>CE_AutoEnableTrade</li>
+            <li>CE_AutoEnableCrafting_FabricationBench</li>
+            <li>CE_AutoEnableCrafting_TableMachining</li>
+        </tradeTags>
+        <thingCategories>
+            <li>AmmoMFCell</li>
+        </thingCategories>
+        <stackLimit>5000</stackLimit>
+    </ThingDef>
+
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="MFCellBase">
+        <defName>Ammo_MFCell</defName>
+        <label>microfusion cell</label>
+        <graphicData>
+            <texPath>Things/Ammo/Charged/Regular</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>0.69</MarketValue>
+        </statBases>
+        <ammoClass>Charged</ammoClass>
+    </ThingDef>
+
+    <!-- ==================== Recipes ========================== -->
+
+    <RecipeDef ParentName="ChargeAmmoRecipeBase">
+        <defName>MakeAmmo_MFCell</defName>
+        <label>make microfusion cell x500</label>
+        <description>Craft 500 microfusion cell.</description>
+        <jobString>Making microfusion cell.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Plasteel</li>
+                <li>Steel</li>
+                <li>ComponentIndustrial</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Ammo_MFCell>500</Ammo_MFCell>
+        </products>
+        <workAmount>8400</workAmount>
+    </RecipeDef>
+
+</Defs>

@@ -17,7 +17,6 @@
     </modDependencies>
     <loadAfter>
         <li>CETeam.CombatExtended</li>
-        <li>Vanilla Weapons Expanded - Laser</li>
         <li>Rick.FCPFNVPsitols</li>
         <li>Rick.FCPFNVLeverActionRifles</li>
         <li>Rick.FCPFNVARLMG</li>

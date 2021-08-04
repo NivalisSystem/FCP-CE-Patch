@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP Desert Ranger Equipment Teaser</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+
+                        <!-- === Ammo Sets === -->
+
+                        <CombatExtended.AmmoSetDef>
+                            <defName>AmmoSet_MFCell</defName>
+                            <label>microfusion cell</label>
+                            <ammoTypes>
+                                <Ammo_MFCell>Bullet_MFCell_LaserRifle</Ammo_MFCell>
+                            </ammoTypes>
+                        </CombatExtended.AmmoSetDef>
+
+                        <!-- === Projectiles === -->
+
+                        <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="LaserBulletRed">
+                            <defName>Bullet_MFCell_LaserRifle</defName>
+                            <label>laser beam</label>
+                            <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                                <damageDef>Bullet</damageDef>
+                                <damageAmountBase>12</damageAmountBase>
+                                <armorPenetrationSharp>17.5</armorPenetrationSharp>
+                                <armorPenetrationBlunt>0.001</armorPenetrationBlunt>
+                            </projectile>
+                        </ThingDef>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
