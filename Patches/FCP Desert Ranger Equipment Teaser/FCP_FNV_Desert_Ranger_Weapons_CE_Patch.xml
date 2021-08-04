@@ -245,19 +245,19 @@
                         <recoilAmount>0.01</recoilAmount>
                         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                         <hasStandardCommand>True</hasStandardCommand>
-                        <defaultProjectile>Bullet_Laser_SalvagedLaserRifle</defaultProjectile>
+                        <defaultProjectile>Bullet_MFCell_LaserRifle</defaultProjectile>
                         <warmupTime>1</warmupTime>
                         <range>62</range>
                         <burstShotCount>6</burstShotCount>
                         <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
-                        <soundCast>VWE_UnstableLaserShot_Rifle</soundCast>
+                        <soundCast>Shot_ChargeRifle</soundCast>
                         <soundCastTail>GunTail_Heavy</soundCastTail>
                         <muzzleFlashScale>9</muzzleFlashScale>
                     </Properties>
                     <AmmoUser>
                         <magazineSize>30</magazineSize>
                         <reloadTime>4</reloadTime>
-                        <ammoSet>AmmoSet_SalvagedLaserRifle</ammoSet>
+                        <ammoSet>AmmoSet_MFCell</ammoSet>
                     </AmmoUser>
                     <FireModes>
                         <aiAimMode>AimedShot</aiAimMode>

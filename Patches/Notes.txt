@@ -9,7 +9,10 @@ I've added a rough first pass of 5mm ammo included with the patch, it should be 
 
 [b]Please report any bugs or errors/wrong stats in the discussions section![/b]
 
-[b]Version: 1.3.0.5[/b]
+[b]Version: 1.3.0.6[/b]
+
+Removed dependency on VWE - Lasers 
+
 Quick pistol rebalance
 
 [h1]Currently Supported[/h1]
@@ -33,18 +36,6 @@ Quick pistol rebalance
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2352667815] Fallout New Vegas - Elite Riot Gear (Patched by CE Already) [/url]
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2529970255] FCP Dogmeat (Uses base classes CE Patches already) [/url]
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2529969640] FCP Fallout Plants [/url]
-[/list]
-
-[h1]Notes for using the Desert Ranger mod[/h1]
-When using the Desert Ranger mod, make sure to load the mods listed bellow, as they are defined in both the standalone packs, and part of the DR mod.
-In addition, to avoid creating a new ammo type right now (this all takes a lot of effort...), I'm using the "Vanilla Weapons Expanded - Laser" mod to provide the ammo for the Ranger Laser Rifle.
-I will Change this in the future, but for now, make sure Vanilla Weapons Expanded - Laser is loaded, and it's requirements. VWE - Laser has a CE patch built into CE itself.
-
-[b]Mods to load alongside Desert Ranger Equipment Teaser:[/b]
-[list]
-[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2537730350] FCP Fallout New Vegas Revolvers! [/url]
-[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2538737483] FCP Fallout New Vegas Assault Rifles and LMG Pack! [/url]
-[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=1989352844] Vanilla Weapons Expanded - Laser [/url]
 [/list]
 
 [h1]GitHub[/h1]
