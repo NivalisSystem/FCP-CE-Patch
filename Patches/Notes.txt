@@ -9,7 +9,8 @@ I've added a rough first pass of 5mm ammo included with the patch, it should be 
 
 [b]Please report any bugs or errors/wrong stats in the discussions section![/b]
 
-Version: 1.3.0.1
+[b]Version: 1.3.0.5[/b]
+Quick pistol rebalance
 
 [h1]Currently Supported[/h1]
 [list]
@@ -21,16 +22,30 @@ Version: 1.3.0.1
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2538737483] FCP Fallout New Vegas Assault Rifles and LMG Pack! [/url]
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2541612295] FCP Fallout New Vegas Heavy Weapons Pack! [/url]
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2518088640] FCP Desert Ranger Equipment Teaser [/url]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2527587775] FCP US Army Equipment Teaser [/url]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2543891891] FCP Fallout Creation Club Rifle Pack! [/url]
 [/list]
+
+[h1]FCP Collection mods that do not need a CE Patch[/h1]
+[list]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2560114781] FCP Tents [/url]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2553041296] FCP Pre-War Meals! [/url]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2352667815] Fallout New Vegas - Elite Riot Gear (Patched by CE Already) [/url]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2529970255] FCP Dogmeat (Uses base classes CE Patches already) [/url]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2529969640] FCP Fallout Plants [/url]
+[/list]
+
 [h1]Notes for using the Desert Ranger mod[/h1]
 When using the Desert Ranger mod, make sure to load the mods listed bellow, as they are defined in both the standalone packs, and part of the DR mod.
 In addition, to avoid creating a new ammo type right now (this all takes a lot of effort...), I'm using the "Vanilla Weapons Expanded - Laser" mod to provide the ammo for the Ranger Laser Rifle.
 I will Change this in the future, but for now, make sure Vanilla Weapons Expanded - Laser is loaded, and it's requirements. VWE - Laser has a CE patch built into CE itself.
 
 [b]Mods to load alongside Desert Ranger Equipment Teaser:[/b]
-[url=steamcommunity.com/sharedfiles/filedetails/?id=2537730350] FCP Fallout New Vegas Revolvers! [/url]
-[url=steamcommunity.com/sharedfiles/filedetails/?id=2538737483] FCP Fallout New Vegas Assault Rifles and LMG Pack! [/url]
-[url=steamcommunity.com/sharedfiles/filedetails/?id=1989352844] Vanilla Weapons Expanded - Laser [/url]
+[list]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2537730350] FCP Fallout New Vegas Revolvers! [/url]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2538737483] FCP Fallout New Vegas Assault Rifles and LMG Pack! [/url]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=1989352844] Vanilla Weapons Expanded - Laser [/url]
+[/list]
 
 [h1]GitHub[/h1]
 The latest version will always be available on Github.
@@ -44,4 +59,26 @@ This can be a relatively slow, and repetitive process, so it may take some time.
 
 Feel free to suggest any packs you would like to see next.
 
+[b]Not Finished[/b]
+Fallout: Red Scare (Beta)
+Vault-Tec - Handy things for your vault!
+FCP Children of Atom Equipment Teaser
+FCP Classic Combat Armor Teaser
+FCP Great Khan Equipment Teaser
+FCP Institute and Railroad Teaser
+FCP Makeshift Weapons Pack
+FCP Chinese Remnant Equipment Teaser
+FCP Raider Armor and Apparel Teaser
+FCP Minuteman Equipment Teaser
 
+[b]Done![/b]
+[strike]FCP Fallout New Vegas Pistols![/strike]
+[strike]FCP Fallout New Vegas Revolvers![/strike]
+[strike]FCP Fallout New Vegas Submachine Guns![/strike]
+[strike]FCP Fallout New Vegas Shotguns![/strike]
+[strike]FCP Fallout New Vegas Lever Action Rifles![/strike]
+[strike]FCP Fallout New Vegas Assault Rifles and LMG Pack![/strike]
+[strike]FCP Fallout New Vegas Heavy Weapons Pack![/strike]
+[strike]FCP Desert Ranger Equipment Teaser[/strike]
+[strike]FCP US Army Equipment Teaser[/strike]
+[strike]FCP Fallout Creation Club Rifle Pack![/strike]

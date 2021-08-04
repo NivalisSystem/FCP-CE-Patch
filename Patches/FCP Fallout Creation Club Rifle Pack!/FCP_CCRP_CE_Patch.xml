@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP Fallout Creation Club Rifle Pack!</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- === Tools === -->
+                <li Class="PatchOperationReplace">
+                    <xpath>
+						/Defs/ThingDef[
+							defName = "FCP_Gun_CR-74L" or
+							defName = "FCP_Gun_Manwell_Rifle" or
+							defName = "FCP_Gun_Manwell_Carbine"
+						]/tools
+                    </xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>stock</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <chanceFactor>1.5</chanceFactor>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>barrel</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>5</power>
+                                <cooldownTime>2.02</cooldownTime>
+                                <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>muzzle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <!-- CR-74L -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_CR-74L</defName>
+                    <statBases>
+                        <Mass>3.3</Mass>
+                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1</SightsEfficiency>
+                        <ShotSpread>0.07</ShotSpread>
+                        <SwayFactor>1.33</SwayFactor>
+                        <Bulk>8.0</Bulk>
+                        <WorkToMake>45000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>65</Steel>
+                        <ComponentIndustrial>8</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <recoilAmount>1.53</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+                        <warmupTime>1.1</warmupTime>
+                        <range>45</range>
+                        <burstShotCount>6</burstShotCount>
+                        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+                        <soundCast>Shot_AssaultRifle</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>12</magazineSize>
+                        <reloadTime>2</reloadTime>
+                        <ammoSet>AmmoSet_45ACP</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>AimedShot</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_AI_Rifle</li>
+                    </weaponTags>
+                    <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+                </li>
+
+                <!-- Manwell Rifle  -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Manwell_Rifle</defName>
+                    <statBases>
+                        <Mass>3.7</Mass>
+                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                        <SightsEfficiency>2.6</SightsEfficiency>
+                        <ShotSpread>0.02</ShotSpread>
+                        <SwayFactor>1.35</SwayFactor>
+                        <Bulk>8.4</Bulk>
+                        <WorkToMake>25000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>60</Steel>
+                        <ComponentIndustrial>5</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <recoilAmount>1.53</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_762x51mmNATO_FMJ</defaultProjectile>
+                        <warmupTime>1.1</warmupTime>
+                        <range>62</range>
+                        <soundCast>Shot_BoltActionRifle</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>8</magazineSize>
+                        <reloadTime>2</reloadTime>
+                        <ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>AimedShot</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_AI_Rifle</li>
+                    </weaponTags>
+                    <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+                </li>
+
+                <!-- Manwell Carbine -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Manwell_Carbine</defName>
+                    <statBases>
+                        <Mass>3.1</Mass>
+                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.2</SightsEfficiency>
+                        <ShotSpread>0.04</ShotSpread>
+                        <SwayFactor>1.39</SwayFactor>
+                        <Bulk>8.0</Bulk>
+                        <WorkToMake>16000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>60</Steel>
+                        <ComponentIndustrial>3</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <recoilAmount>1.53</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_762x51mmNATO_FMJ</defaultProjectile>
+                        <warmupTime>1.1</warmupTime>
+                        <range>45</range>
+                        <soundCast>Shot_BoltActionRifle</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>8</magazineSize>
+                        <reloadTime>2</reloadTime>
+                        <ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>AimedShot</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_AI_Rifle</li>
+                    </weaponTags>
+                    <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

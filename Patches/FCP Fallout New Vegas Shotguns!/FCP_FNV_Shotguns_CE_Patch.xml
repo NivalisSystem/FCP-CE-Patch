@@ -310,7 +310,7 @@
 
                 <!-- Lever Action Shotgun -->
                 <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
-                    <defName>FCP_Gun_Dinner_Bell</defName>
+                    <defName>FCP_Gun_Lever_Action_Shotgun</defName>
                     <statBases>
                         <WorkToMake>13000</WorkToMake>
                         <Bulk>3.75</Bulk>
