@@ -8,7 +8,16 @@
         <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
     </ThingCategoryDef>
 
-    <!-- ==================== AmmoSet ========================== -->
+    <!-- === Ammo Sets === -->
+
+    <CombatExtended.AmmoSetDef>
+        <defName>AmmoSet_MFCell</defName>
+        <label>microfusion cell</label>
+        <ammoTypes>
+            <Ammo_MFCell>Bullet_MFCell_LaserRifle</Ammo_MFCell>
+        </ammoTypes>
+    </CombatExtended.AmmoSetDef>
+
 
     <!-- ==================== Ammo ========================== -->
 
@@ -40,6 +49,19 @@
             <MarketValue>0.69</MarketValue>
         </statBases>
         <ammoClass>Charged</ammoClass>
+    </ThingDef>
+
+    <!-- === Projectiles === -->
+
+    <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="LaserBulletRed">
+        <defName>Bullet_MFCell_LaserRifle</defName>
+        <label>laser beam</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>12</damageAmountBase>
+            <armorPenetrationSharp>17.5</armorPenetrationSharp>
+            <armorPenetrationBlunt>0.001</armorPenetrationBlunt>
+        </projectile>
     </ThingDef>
 
     <!-- ==================== Recipes ========================== -->
