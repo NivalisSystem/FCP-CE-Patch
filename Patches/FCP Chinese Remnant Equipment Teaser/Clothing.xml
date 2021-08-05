@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP Chinese Remnant Equipment Teaser</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- Chinese Officers Jumsuit -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Chinese_Remnant_Officer_Jumpsuit"]/statBases</xpath>
+                    <value>
+                        <Bulk>5</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Chinese_Remnant_Officer_Jumpsuit"]/equippedStatOffsets</xpath>
+                    <value>
+                        <CarryBulk>20</CarryBulk>
+                        <CarryWeight>10</CarryWeight>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Chinese_Remnant_Officer_Jumpsuit"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>3</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Chinese_Remnant_Officer_Jumpsuit"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>6</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- Winterized Chinese Officers Jumpsuit -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Chinese_Officer_Jumpsuit"]/statBases</xpath>
+                    <value>
+                        <Bulk>5</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Chinese_Officer_Jumpsuit"]/equippedStatOffsets</xpath>
+                    <value>
+                        <CarryBulk>20</CarryBulk>
+                        <CarryWeight>10</CarryWeight>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Chinese_Officer_Jumpsuit"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>3</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Chinese_Officer_Jumpsuit"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>6</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- Chinese Jumsuit -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Chinese_Remnant_Jumpsuit"]/statBases</xpath>
+                    <value>
+                        <Bulk>5</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Chinese_Remnant_Jumpsuit"]/equippedStatOffsets</xpath>
+                    <value>
+                        <CarryBulk>20</CarryBulk>
+                        <CarryWeight>10</CarryWeight>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Chinese_Remnant_Jumpsuit"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>3</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Chinese_Remnant_Jumpsuit"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>6</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- Winterized Chinese Jumsuit -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Chinese_Remnant_Jumpsuit"]/statBases</xpath>
+                    <value>
+                        <Bulk>5</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Chinese_Remnant_Jumpsuit"]/equippedStatOffsets</xpath>
+                    <value>
+                        <CarryBulk>20</CarryBulk>
+                        <CarryWeight>10</CarryWeight>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Chinese_Remnant_Jumpsuit"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>3</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Chinese_Remnant_Jumpsuit"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>6</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- Chinese Remnant Helmet -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Chinese_Remnant_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Chinese_Remnant_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Chinese_Remnant_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- Chinese Remnant Winter Hat -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Chinese_Remnant_Winter_Hat"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Chinese_Remnant_Winter_Hat"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>3</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Chinese_Remnant_Winter_Hat"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>5</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
