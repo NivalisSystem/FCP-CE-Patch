@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP Fallout New Vegas Assault Rifles and LMG Pack!</li>
+            <li>FCP FNV Heavy Weapons Pack!</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs</xpath>
+                    <value>
+                    
+                        <!-- ==================== Ammo ========================== -->
+
+                        <ThingDef Class="CombatExtended.AmmoDef" ParentName="MiniNukeBase">
+                            <defName>Ammo_MiniNuke</defName>
+                            <label>mini nuke</label>
+                            <graphicData>
+                                <texPath>Things/Projectile/FCP_Mini_Nuke</texPath>
+                                <graphicClass>Graphic_Single</graphicClass>
+                            </graphicData>
+                            <statBases>
+                                <MarketValue>500</MarketValue>
+                            </statBases>
+                            <ammoClass>RadiationIonising</ammoClass>
+                            <detonateProjectile>Bullet_MiniNuke</detonateProjectile>
+                        </ThingDef>
+
+                        <!-- ================== Projectiles ================== -->
+
+                        <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseBullet">
+                            <defName>Bullet_MiniNuke</defName>
+                            <thingClass>CombatExtended.ProjectileCE_Explosive</thingClass>
+                            <label>mini nuke</label>
+                            <graphicData>
+                                <texPath>Things/Projectile/FCP_Mini_Nuke</texPath>
+                                <graphicClass>Graphic_Single</graphicClass>
+                            </graphicData>
+                            <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                                <damageDef>Burn</damageDef>
+                                <damageAmountBase>500</damageAmountBase>
+                                <armorPenetrationSharp>100</armorPenetrationSharp>
+                                <armorPenetrationBlunt>41.818</armorPenetrationBlunt>
+                                <speed>12</speed>
+                                <flyOverhead>false</flyOverhead>
+                                <explosionRadius>15.8</explosionRadius>
+                                <soundExplode>MortarIncendiary_Explode</soundExplode>
+                                <soundHitThickRoof>Artillery_HitThickRoof</soundHitThickRoof>
+                                <soundImpactAnticipate>MortarRound_PreImpact</soundImpactAnticipate>
+                                <soundAmbient>MortarRound_Ambient</soundAmbient>
+                            </projectile>
+                        </ThingDef>
+
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
