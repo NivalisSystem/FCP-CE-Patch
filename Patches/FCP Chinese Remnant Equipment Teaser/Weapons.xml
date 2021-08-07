@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP Chinese Remnant Equipment Teaser</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- _______________Ranged_______________ -->
+
+                <!-- Chinese Pistol -->
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName = "FCP_Gun_Chinese_Pistol"]/tools</xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>grip</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>2</power>
+                                <cooldownTime>1.54</cooldownTime>
+                                <chanceFactor>1.5</chanceFactor>
+                                <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>muzzle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>2</power>
+                                <cooldownTime>1.54</cooldownTime>
+                                <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Chinese_Pistol</defName>
+                    <statBases>
+                        <WorkToMake>3200</WorkToMake>
+                        <Mass>1.0</Mass>
+                        <Bulk>1.8</Bulk>
+                        <SwayFactor>1.07</SwayFactor>
+                        <ShotSpread>0.15</ShotSpread>
+                        <SightsEfficiency>0.70</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.35</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>25</Steel>
+                        <ComponentIndustrial>1</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_45ACP_FMJ</defaultProjectile>
+                        <warmupTime>0.3</warmupTime>
+                        <range>18</range>
+                        <soundCast>Shot_Autopistol</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>10</magazineSize>
+                        <reloadTime>2.5</reloadTime>
+                        <ammoSet>AmmoSet_45ACP</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>SimpleGun</li>
+                        <li>CE_Sidearm</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                </li>
+
+                <!-- _______________Rifles_______________ -->
+
+                <li Class="PatchOperationReplace">
+                    <xpath>
+						/Defs/ThingDef[
+							defName = "FCP_Gun_Chinese_Assault_Rifle" or
+							defName = "FCP_Gun_Chinese_Assault_Carbine" or
+							defName = "FCP_Gun_Gauss_Rifle"
+						]/tools
+                    </xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>stock</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <chanceFactor>1.5</chanceFactor>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>barrel</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>5</power>
+                                <cooldownTime>2.02</cooldownTime>
+                                <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>muzzle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <!-- Chinese Assault Rifle -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Chinese_Assault_Rifle</defName>
+                    <statBases>
+                        <WorkToMake>40000</WorkToMake>
+                        <Mass>3.5</Mass>
+                        <Bulk>6.7</Bulk>
+                        <SwayFactor>1.25</SwayFactor>
+                        <ShotSpread>0.08</ShotSpread>
+                        <SightsEfficiency>1.0</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>65</Steel>
+                        <ComponentIndustrial>7</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+                        <burstShotCount>6</burstShotCount>
+                        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+                        <warmupTime>1.1</warmupTime>
+                        <range>45</range>
+                        <soundCast>Shot_AssaultRifle</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                        <recoilAmount>2.12</recoilAmount>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>24</magazineSize>
+                        <reloadTime>2.2</reloadTime>
+                        <ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                        <aiUseBurstMode>True</aiUseBurstMode>
+                        <aimedBurstShotCount>2</aimedBurstShotCount>
+                    </FireModes>
+                    <weaponTags>
+                        <li>IndustrialGunAdvanced</li>
+                    </weaponTags>
+                    <!-- Required Research Rework -->
+                    <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+                </li>
+
+                <!-- Chinese Assault Carbine -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Chinese_Assault_Carbine</defName>
+                    <statBases>
+                        <WorkToMake>45000</WorkToMake>
+                        <Mass>3.5</Mass>
+                        <Bulk>6.7</Bulk>
+                        <SwayFactor>1.25</SwayFactor>
+                        <ShotSpread>0.06</ShotSpread>
+                        <SightsEfficiency>1.2</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>65</Steel>
+                        <ComponentIndustrial>7</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+                        <burstShotCount>6</burstShotCount>
+                        <ticksBetweenBurstShots>15</ticksBetweenBurstShots>
+                        <warmupTime>1.1</warmupTime>
+                        <range>45</range>
+                        <soundCast>Shot_AssaultRifle</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                        <recoilAmount>2.12</recoilAmount>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>30</magazineSize>
+                        <reloadTime>2.2</reloadTime>
+                        <ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                        <aiUseBurstMode>True</aiUseBurstMode>
+                        <aimedBurstShotCount>3</aimedBurstShotCount>
+                    </FireModes>
+                    <weaponTags>
+                        <li>IndustrialGunAdvanced</li>
+                    </weaponTags>
+                    <!-- Required Research Rework -->
+                    <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+                </li>
+
+                <!-- Gauss Rifle -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Gauss_Rifle</defName>
+                    <statBases>
+                        <Mass>8.0</Mass>
+                        <RangedWeapon_Cooldown>1.36</RangedWeapon_Cooldown>
+                        <SightsEfficiency>2.6</SightsEfficiency>
+                        <ShotSpread>0.05</ShotSpread>
+                        <SwayFactor>1.35</SwayFactor>
+                        <Bulk>9.5</Bulk>
+                        <WorkToMake>65000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Plasteel>60</Plasteel>
+                        <ComponentSpacer>4</ComponentSpacer>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_2mmEC_Sabot</defaultProjectile>
+                        <warmupTime>1.8</warmupTime>
+                        <range>75</range>
+                        <soundCast>ChargeLance_Fire</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>7</magazineSize>
+                        <reloadTime>4</reloadTime>
+                        <ammoSet>AmmoSet_2mmEC</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>AimedShot</aiAimMode>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_AI_Rifle</li>
+                    </weaponTags>
+                    <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+                    <AllowWithRunAndGun>false</AllowWithRunAndGun>
+                </li>
+
+                <!-- _______________Melee_______________ -->
+
+                <!-- Chinese Shock Sword -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Chinese_Shock_Sword"]/tools</xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>handle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>3</power>
+                                <cooldownTime>1.69</cooldownTime>
+                                <chanceFactor>0.10</chanceFactor>
+                                <armorPenetrationBlunt>0.8</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>point</label>
+                                <capacities>
+                                    <li>Stab</li>
+                                </capacities>
+                                <power>18</power>
+                                <cooldownTime>1.69</cooldownTime>
+                                <chanceFactor>0.60</chanceFactor>
+                                <armorPenetrationBlunt>0.8</armorPenetrationBlunt>
+                                <armorPenetrationSharp>1.6</armorPenetrationSharp>
+                                <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>edge</label>
+                                <capacities>
+                                    <li>Cut</li>
+                                </capacities>
+                                <power>36</power>
+                                <cooldownTime>1.56</cooldownTime>
+                                <chanceFactor>0.30</chanceFactor>
+                                <armorPenetrationBlunt>2.592</armorPenetrationBlunt>
+                                <armorPenetrationSharp>0.58</armorPenetrationSharp>
+                                <linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Chinese_Shock_Sword"]/statBases</xpath>
+                    <value>
+                        <Bulk>8</Bulk>
+                        <MeleeCounterParryBonus>1</MeleeCounterParryBonus>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Chinese_Shock_Sword"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <MeleeCritChance>0.63</MeleeCritChance>
+                            <MeleeParryChance>0.75</MeleeParryChance>
+                            <MeleeDodgeChance>0.4</MeleeDodgeChance>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+                <!-- Chineses Officer Sword -->
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Chinese_Officer_Sword"]/tools</xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>handle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>3</power>
+                                <cooldownTime>1.69</cooldownTime>
+                                <chanceFactor>0.10</chanceFactor>
+                                <armorPenetrationBlunt>0.8</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>point</label>
+                                <capacities>
+                                    <li>Stab</li>
+                                </capacities>
+                                <power>18</power>
+                                <cooldownTime>1.69</cooldownTime>
+                                <chanceFactor>0.60</chanceFactor>
+                                <armorPenetrationBlunt>0.8</armorPenetrationBlunt>
+                                <armorPenetrationSharp>1.6</armorPenetrationSharp>
+                                <linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>edge</label>
+                                <capacities>
+                                    <li>Cut</li>
+                                </capacities>
+                                <power>36</power>
+                                <cooldownTime>1.56</cooldownTime>
+                                <chanceFactor>0.30</chanceFactor>
+                                <armorPenetrationBlunt>2.592</armorPenetrationBlunt>
+                                <armorPenetrationSharp>0.58</armorPenetrationSharp>
+                                <linkedBodyPartsGroup>Edge</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Chinese_Officer_Sword"]/statBases</xpath>
+                    <value>
+                        <Bulk>8</Bulk>
+                        <MeleeCounterParryBonus>1</MeleeCounterParryBonus>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Chinese_Officer_Sword"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <MeleeCritChance>0.63</MeleeCritChance>
+                            <MeleeParryChance>0.75</MeleeParryChance>
+                            <MeleeDodgeChance>0.4</MeleeDodgeChance>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

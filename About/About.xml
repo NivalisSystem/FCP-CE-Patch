@@ -6,7 +6,9 @@
         <li>1.3</li>
     </supportedVersions>
     <packageId>LXD.FCPCEP.1.3.0</packageId>
-    <description>Version: 1.3.0.1\n\nPatches the Fallout Collaboration Project to work with Combat Extended.</description>
+    <description>Version: 1.3.0.8\n\nPatches the Fallout Collaboration Project to work with Combat Extended.\n
+    Latest changes: Patched Chinese Remnant Equipment teaser, few fixes, balance issues. Reworked ammo patching.
+    </description>
     <modDependencies>
         <li>
             <packageId>CETeam.CombatExtended</packageId>
@@ -26,5 +28,7 @@
         <li>Rick.FCPFNVSMG</li>
         <li>Rick.FCPDR</li>
         <li>Rick.FCPUSA</li>
+        <li>Rick.FCPCRE</li>
+        <li>Rick.FCPPGE</li>
     </loadAfter>
 </ModMetaData>
