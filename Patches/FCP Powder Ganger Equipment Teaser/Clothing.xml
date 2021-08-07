@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP Powder Ganger Equipment Teaser</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <!-- NCRCF Inmate Uniform -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_NCRCF_Inmate_Uniform"]/statBases</xpath>
+                    <value>
+                        <Bulk>1</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <!-- NCRCF Jacket -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_NCRCF_Over_Shirt"]/statBases</xpath>
+                    <value>
+                        <Bulk>3</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_NCRCF_Over_Shirt"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <CarryBulk>5</CarryBulk>
+                            <CarryWeight>5</CarryWeight>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+                <!-- NCRCF Guard Armor -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_NCRCF_Guard_Vest"]/statBases</xpath>
+                    <value>
+                        <Bulk>5</Bulk>
+                        <WornBulk>3</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_NCRCF_Guard_Vest"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>5</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_NCRCF_Guard_Vest"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>12</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_NCRCF_Guard_Vest"]/equippedStatOffsets</xpath>
+                    <value>
+                        <CarryBulk>10</CarryBulk>
+                        <CarryWeight>5</CarryWeight>
+                    </value>
+                </li>
+
+                <!-- NCRCF Guard Helmet -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_NCRCF_Guard_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>1</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_NCRCF_Guard_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>5</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_NCRCF_Guard_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>12</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- Powder Ganger Outfit -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Powder_Ganger_Simple_Outfit"]/statBases</xpath>
+                    <value>
+                        <Bulk>1</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Powder_Ganger_Simple_Outfit"]/equippedStatOffsets</xpath>
+                    <value>
+                        <CarryBulk>5</CarryBulk>
+                        <CarryWeight>5</CarryWeight>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
