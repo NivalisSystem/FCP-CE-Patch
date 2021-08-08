@@ -5,7 +5,7 @@
     <supportedVersions>
         <li>1.3</li>
     </supportedVersions>
-    <packageId>LXD.FCPCEP.1.3.0</packageId>
+    <packageId>LXD.FCPCE</packageId>
     <description>Version: 1.3.1.3\n\nPatches the Fallout Collaboration Project to work with Combat Extended.\n
     Latest changes:\n
     - Added new CE Loading Bench art from Ranger Rick!
