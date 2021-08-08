@@ -344,7 +344,19 @@
                     </value>
                 </li>
 
-                <!--______ The defs below here may need to get moved if FCP USA patch is fixed ______-->
+            </operations>
+        </match>
+    </Operation>
+
+    <!-- This isn't needed YET, but is implied in US ARMY mod, 
+    that defs will be removed, so we should only patch if the mod is not found -->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP US Army Equipment Teaser</li>
+        </mods>
+        <nomatch Class="PatchOperationSequence">
+            <operations>
 
                 <!-- FCP_Apparel_US_Army_Combat_Helmet -->
                 <li Class="PatchOperationAdd">
@@ -514,22 +526,6 @@
                         </equippedStatOffsets>
                     </value>
                 </li>
-
-            </operations>
-        </match>
-    </Operation>
-
-    <!-- This isn't needed YET, but is implied in US ARMY mod, 
-    that defs will be removed, so we should only patch if the mod is not found -->
-
-    <Operation Class="PatchOperationFindMod">
-        <mods>
-            <li>FCP US Army Equipment Teaser</li>
-        </mods>
-        <nomatch Class="PatchOperationSequence">
-            <operations>
-
-                
 
             </operations>
         </nomatch>
