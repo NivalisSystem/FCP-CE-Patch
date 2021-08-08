@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP Great Khan Equipment Teaser</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- Great Khan Armored Leather -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Armored_Leather"]/statBases</xpath>
+                    <value>
+                        <Bulk>5</Bulk>
+                        <WornBulk>2</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Armored_Leather"]/equippedStatOffsets</xpath>
+                    <value>
+                        <CarryBulk>15</CarryBulk>
+                        <CarryWeight>10</CarryWeight>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Armored_Leather"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>2</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Armored_Leather"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>6</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- Great Khan Simple Armor -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Simple_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>5</Bulk>
+                        <WornBulk>2</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Simple_Armor"]/equippedStatOffsets</xpath>
+                    <value>
+                        <CarryBulk>15</CarryBulk>
+                        <CarryWeight>10</CarryWeight>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Simple_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>2</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Simple_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>6</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- Great Khan Soldier Armor -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Soldier_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>5</Bulk>
+                        <WornBulk>2</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Soldier_Armor"]/equippedStatOffsets</xpath>
+                    <value>
+                        <CarryBulk>15</CarryBulk>
+                        <CarryWeight>10</CarryWeight>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Soldier_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>3</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Soldier_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>8</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- Great Khan Suit Armor -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Suit_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>5</Bulk>
+                        <WornBulk>2</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Suit_Armor"]/equippedStatOffsets</xpath>
+                    <value>
+                        <CarryBulk>15</CarryBulk>
+                        <CarryWeight>10</CarryWeight>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Suit_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>4</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Suit_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>12</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- Great Khan Helmet -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Helmet"]/statBases</xpath>
+                    <value>
+                        <ArmorRating_Sharp>2</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Helmet"]/statBases</xpath>
+                    <value>
+                        <ArmorRating_Blunt>5</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- Great Khan Ceremonial Helm -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Ceremonial_Helm"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Ceremonial_Helm"]/statBases</xpath>
+                    <value>
+                        <ArmorRating_Sharp>2</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Great_Khan_Ceremonial_Helm"]/statBases</xpath>
+                    <value>
+                        <ArmorRating_Blunt>5</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
