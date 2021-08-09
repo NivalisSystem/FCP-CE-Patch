@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+        <defName>AmmoGammaRound</defName>
+        <label>gamma round</label>
+        <parent>AmmoPistols</parent>
+        <iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
+    </ThingCategoryDef>
+
+    <!-- ==================== AmmoSet ========================== -->
+
+    <CombatExtended.AmmoSetDef>
+        <defName>AmmoSet_GammaRound</defName>
+        <label>gamma round</label>
+        <ammoTypes>
+            <Ammo_GammaRound_Base>Bullet_GammaRound_Base</Ammo_GammaRound_Base>
+        </ammoTypes>
+    </CombatExtended.AmmoSetDef>
+
+    <!-- ==================== Ammo ========================== -->
+
+    <ThingDef Class="CombatExtended.AmmoDef" Name="GammaRound_Base" ParentName="SmallAmmoBase" Abstract="True">
+        <description>The 5mm round is a small caliber high velocity rifle cartridge.</description>
+        <statBases>
+            <Mass>0.02</Mass>
+            <Bulk>0.02</Bulk>
+        </statBases>
+        <tradeTags>
+            <li>CE_AutoEnableTrade</li>
+            <li>CE_AutoEnableCrafting</li>
+        </tradeTags>
+        <thingCategories>
+            <li>AmmoGammaRound</li>
+        </thingCategories>
+    </ThingDef>
+
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="GammaRound_Base">
+        <defName>Ammo_GammaRound_Base</defName>
+        <label>gamma round cartridge (FMJ)</label>
+        <graphicData>
+            <texPath>Things/Ammo/Rifle/FMJ</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>0.09</MarketValue>
+        </statBases>
+        <ammoClass>RadiationIonising</ammoClass>
+        <cookOffProjectile>Bullet_GammaRound_Base</cookOffProjectile>
+    </ThingDef>
+
+    <!-- ================== DamageDef ================== -->
+
+    <DamageDef ParentName="Bullet">
+        <defName>FCP_ToxicBuildupGamma</defName>
+        <label>gamma Round</label>
+        <soundExplosion>Gamma_Gun_Shot</soundExplosion>
+        <additionalHediffs>
+            <li>
+                <hediff>ToxicBuildup</hediff>
+                <severityPerDamageDealt>0.20</severityPerDamageDealt>
+                <victimSeverityScaling>ToxicSensitivity</victimSeverityScaling>
+                <victimSeverityScalingByInvBodySize>false</victimSeverityScalingByInvBodySize>
+            </li>
+        </additionalHediffs>
+    </DamageDef>
+
+    <!-- ================== Projectiles ================== -->
+
+    <ThingDef Class="CombatExtended.AmmoDef" Name="BaseGammaRound" ParentName="BaseBullet" Abstract="true">
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>Bullet</damageDef>
+            <speed>15</speed>
+            <dropsCasings>true</dropsCasings>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseGammaRound">
+        <defName>Bullet_GammaRound_Base</defName>
+        <label>gamma round</label>
+        <graphicData>
+            <texPath>Things/Projectile/Gamma_Blast</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>FCP_ToxicBuildupGamma</damageDef>
+            <damageAmountBase>4</damageAmountBase>
+            <explosionRadius>1</explosionRadius>
+        </projectile>
+    </ThingDef>
+
+    <!-- ==================== Recipes ========================== -->
+
+    <RecipeDef ParentName="AmmoRecipeBase">
+        <defName>MakeAmmo_GammaRound_Base</defName>
+        <label>make gamma round cartridge x500</label>
+        <description>Craft 500 gamma round cartridges.</description>
+        <jobString>Making gamma round cartridges.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>26</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Steel</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Ammo_GammaRound_Base>500</Ammo_GammaRound_Base>
+        </products>
+        <workAmount>2600</workAmount>
+    </RecipeDef>
+
+</Defs>
