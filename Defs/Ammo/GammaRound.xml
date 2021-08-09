@@ -89,7 +89,7 @@
         </graphicData>
         <projectile Class="CombatExtended.ProjectilePropertiesCE">
             <damageDef>FCP_ToxicBuildupGamma</damageDef>
-            <damageAmountBase>4</damageAmountBase>
+            <damageAmountBase>1</damageAmountBase>
             <explosionRadius>1</explosionRadius>
         </projectile>
     </ThingDef>
