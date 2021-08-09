@@ -64,7 +64,6 @@ Feel free to suggest any packs you would like to see next.
 [b]Not Finished[/b]
 Fallout: Red Scare (Beta)
 Vault-Tec - Handy things for your vault!
-FCP Children of Atom Equipment Teaser
 FCP Institute and Railroad Teaser
 FCP Makeshift Weapons Pack
 FCP Raider Armor and Apparel Teaser
@@ -85,3 +84,4 @@ FCP Minuteman Equipment Teaser
 [strike]FCP Powder Ganger Equipment Teaser[/strike]
 [strike]FCP Classic Combat Armor Teaser[/strike]
 [strike]FCP Great Khan Equipment Teaser[/strike]
+[strike]FCP Children of Atom Equipment Teaser[/strike]

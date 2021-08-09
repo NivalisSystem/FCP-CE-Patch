@@ -21,7 +21,7 @@
     <!-- ==================== Ammo ========================== -->
 
     <ThingDef Class="CombatExtended.AmmoDef" Name="GammaRound_Base" ParentName="SmallAmmoBase" Abstract="True">
-        <description>The 5mm round is a small caliber high velocity rifle cartridge.</description>
+        <description>The gamma rounds closely resemble high voltage electrolytic capacitors in size and shape. Dealing lethal amounts of radiation.</description>
         <statBases>
             <Mass>0.02</Mass>
             <Bulk>0.02</Bulk>
@@ -54,7 +54,7 @@
     <DamageDef ParentName="Bullet">
         <defName>FCP_ToxicBuildupGamma</defName>
         <label>gamma Round</label>
-        <soundExplosion>Gamma_Gun_Shot</soundExplosion>
+        
         <additionalHediffs>
             <li>
                 <hediff>ToxicBuildup</hediff>
@@ -83,7 +83,7 @@
         <defName>Bullet_GammaRound_Base</defName>
         <label>gamma round</label>
         <graphicData>
-            <texPath>Things/Projectile/Gamma_Blast</texPath>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>TransparentPostLight</shaderType>
         </graphicData>
