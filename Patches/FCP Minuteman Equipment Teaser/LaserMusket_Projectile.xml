@@ -12,36 +12,37 @@
           <xpath>Defs</xpath>
           <value>
 
-        <!-- === Ammo Sets === -->
+            <!-- === Ammo Sets === -->
 
-        <CombatExtended.AmmoSetDef>
-          <defName>AmmoSet_LaserMusket</defName>
-          <label>laser charge</label>
-          <ammoTypes>
-            <Ammo_LaserChargePack>Bullet_Laser_Musket</Ammo_LaserChargePack>
-          </ammoTypes>
-        </CombatExtended.AmmoSetDef>
+            <CombatExtended.AmmoSetDef>
+              <defName>AmmoSet_LaserMusket</defName>
+              <label>laser charge</label>
+              <ammoTypes>
+                <Ammo_LaserChargePack>Bullet_Laser_Musket</Ammo_LaserChargePack>
+              </ammoTypes>
+            </CombatExtended.AmmoSetDef>
 
 
-        <!-- === Projectiles === -->
+            <!-- === Projectiles === -->
 
-        <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="LaserBulletRed">
-          <defName>Bullet_Laser_Musket</defName>
-          <label>laser beam</label>                              
-          <projectile Class="CombatExtended.ProjectilePropertiesCE">
-            <damageDef>Bullet</damageDef>
-            <damageAmountBase>26</damageAmountBase>
-            <armorPenetrationSharp>22</armorPenetrationSharp>
-            <armorPenetrationBlunt>0.001</armorPenetrationBlunt>
-		  <secondaryDamage>
-				<li>
-			  	<def>Flame_Secondary</def>
-			  	<amount>14</amount>
-				</li>
-		  </secondaryDamage>
-          </projectile>        
-        </ThingDef>
-
+            <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="LaserBulletRed">
+              <defName>Bullet_Laser_Musket</defName>
+              <label>laser beam</label>
+              <projectile Class="CombatExtended.ProjectilePropertiesCE">
+                <damageDef>Bullet</damageDef>
+                <damageAmountBase>26</damageAmountBase>
+                <armorPenetrationSharp>22</armorPenetrationSharp>
+                <armorPenetrationBlunt>0.001</armorPenetrationBlunt>
+                <secondaryDamage>
+                  <li>
+                    <def>Flame_Secondary</def>
+                    <amount>14</amount>
+                  </li>
+                </secondaryDamage>
+              </projectile>
+            </ThingDef>
+          </value>
+        </li>
       </operations>
     </match>
   </Operation>
