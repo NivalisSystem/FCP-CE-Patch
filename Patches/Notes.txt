@@ -6,19 +6,14 @@ Even though I've done my best to test everything, there may still be errors, so 
 
 [b]Please report any bugs or errors/wrong stats in the discussions section![/b]
 
-[b]Version: 1.3.1.4[/b]
+[b]Version: 1.3.1.5[/b]
 
-[b]Patched FCP Children of Atom Equipment Teaser![/b]
-
+[b]Patched FCP Makeshift Weapons Pack! (Thanks to Red_Bunny for providing the patches)[/b]
+Patched FCP Children of Atom Equipment Teaser
 Added new CE Loading Bench art from Ranger Rick!
 Fixed patching for FCP US Army Equipment Teaser update
 Patched FCP Great Khan Equipment Teaser
 Patched FCP Classic Combat Armor Teaser
-Patched FCP Powder Ganger Equipment Teaser
-Patched Chinese Remnant Equipment Teaser!
-Re-worked ammo patching/adding. (No errors if you don't have a specific pack loaded and textures cannot be found)
-Removed dependency on VWE - Lasers 
-Quick pistol rebalance
 
 [h1]Currently Supported[/h1]
 [list]
