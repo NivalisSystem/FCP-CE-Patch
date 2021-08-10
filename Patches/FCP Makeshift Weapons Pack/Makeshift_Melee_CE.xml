@@ -59,13 +59,11 @@
                 </li>
 
                 <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="FCP_Melee_Ripper"]</xpath>
+                    <xpath>/Defs/ThingDef[defName="FCP_Melee_Ripper"]/equippedStatOffsets</xpath>
                     <value>
-                        <equippedStatOffsets>
-                            <MeleeCritChance>0.2</MeleeCritChance>
-                            <MeleeParryChance>0.04</MeleeParryChance>
-                            <MeleeDodgeChance>0.01</MeleeDodgeChance>
-                        </equippedStatOffsets>
+                        <MeleeCritChance>0.2</MeleeCritChance>
+                        <MeleeParryChance>0.04</MeleeParryChance>
+                        <MeleeDodgeChance>0.01</MeleeDodgeChance>
                     </value>
                 </li>
 
@@ -489,7 +487,7 @@
                 </li>
 
                 <li Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="FCP_Melee_Throat_Cutter"]/statBases/Mass</xpath>
+                    <xpath>Defs/ThingDef[defName="FCP_Melee_Wrench_Knife"]/statBases/Mass</xpath>
                     <value>
                         <Mass>1</Mass>
                         <Bulk>2.5</Bulk>
@@ -498,13 +496,11 @@
                 </li>
 
                 <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThingDef[defName="FCP_Melee_Wrench_Knife"]</xpath>
+                    <xpath>Defs/ThingDef[defName="FCP_Melee_Wrench_Knife"]/equippedStatOffsets</xpath>
                     <value>
-                        <equippedStatOffsets>
-                            <MeleeCritChance>0.4</MeleeCritChance>
-                            <MeleeParryChance>0.15</MeleeParryChance>
-                            <MeleeDodgeChance>0.05</MeleeDodgeChance>
-                        </equippedStatOffsets>
+                        <MeleeCritChance>0.4</MeleeCritChance>
+                        <MeleeParryChance>0.15</MeleeParryChance>
+                        <MeleeDodgeChance>0.05</MeleeDodgeChance>
                     </value>
                 </li>
 
