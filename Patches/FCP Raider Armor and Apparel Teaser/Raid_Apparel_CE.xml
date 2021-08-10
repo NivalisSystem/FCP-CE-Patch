@@ -11,17 +11,11 @@
                 <!-- === Long boi === -->
 
                 <li Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Long_Johns"]/costStuffCount</xpath>
-                    <value>
-                        <costStuffCount>50</costStuffCount>
-                    </value>
-                </li>
-
-                <li Class="PatchOperationReplace">
                     <xpath>Defs/ThingDef[defName="FCP_Apparel_Long_Johns"]/statBases/Mass</xpath>
                     <value>
                         <Mass>0.2</Mass>
                         <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
                     </value>
                 </li>
 
@@ -207,7 +201,7 @@
                     <xpath>Defs/ThingDef[defName="FCP_Apparel_Raider_Painspiker_Armor"]/equippedStatOffsets/MoveSpeed</xpath>
                 </li>
 
-                <!-- === Painspiker === -->
+                <!-- === Badland Armor === -->
 
                 <li Class="PatchOperationReplace">
                     <xpath>Defs/ThingDef[defName="FCP_Apparel_Raider_Badland_Armor"]/costList</xpath>
