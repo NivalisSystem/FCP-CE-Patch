@@ -37,6 +37,7 @@ Quick pistol rebalance
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2522252565] FCP Classic Combat Armor Teaser [/url]
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2526607612] FCP Great Khan Equipment Teaser [/url]
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2516691197] FCP Children of Atom Equipment Teaser [/url]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2533952036] FCP Makeshift Weapons Pack [/url] (Thanks to Red_Bunny!)
 [/list]
 
 [h1]FCP Collection mods that do not need a CE Patch[/h1]
@@ -65,6 +66,5 @@ Feel free to suggest any packs you would like to see next.
 Fallout: Red Scare (Beta)
 Vault-Tec - Handy things for your vault!
 FCP Institute and Railroad Teaser (In Progress, base mod may need fixes)
-FCP Makeshift Weapons Pack
 FCP Raider Armor and Apparel Teaser
 FCP Minuteman Equipment Teaser
