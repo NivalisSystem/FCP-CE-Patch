@@ -6,15 +6,15 @@
         <li>1.3</li>
     </supportedVersions>
     <packageId>LXD.FCPCEP.1.3.0</packageId>
-    <description>Version: 1.3.1.7\n\nPatches the Fallout Collaboration Project to work with Combat Extended.\n
+    <description>Version: 1.3.1.8\n\nPatches the Fallout Collaboration Project to work with Combat Extended.\n
     Latest changes:\n
+    - Patched Vault-Tec - Handy things for your vault!
     - Patched FCP Minuteman Equipment Teaser! (Thanks to Red_Bunny for providing the patches)
     - Patched FCP Raider Armor and Apparel Teaser! (Thanks to Red_Bunny for providing the patches)
     - Patched FCP Makeshift Weapons Pack! (Thanks to Red_Bunny for providing the patches)
     - Patched FCP Children of Atom Equipment Teaser!
     - Added new CE Loading Bench art from Ranger Rick!
     - Fixed patching for FCP US Army Equipment Teaser update
-    - Patched FCP Great Khan Equipment Teaser
     </description>
     <modDependencies>
         <li>
@@ -43,5 +43,6 @@
         <li>Rick.Lunz.FCPMKS</li>
         <li>Rick.FCPRaid</li>
         <li>Rick.FCPMMET</li>
+        <li>Twink.Vaultfurniture</li>
     </loadAfter>
 </ModMetaData>
