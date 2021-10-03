@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP Children of Atom Equipment Teaser</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- === Tools === -->
+                <li Class="PatchOperationReplace">
+                    <xpath>
+						/Defs/ThingDef[
+							defName = "FCP_Radium_Rifle" or 
+							defName = "FCP_Gamma_Gun"
+						]/tools
+                    </xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>stock</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <chanceFactor>1.5</chanceFactor>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>barrel</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>5</power>
+                                <cooldownTime>2.02</cooldownTime>
+                                <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>muzzle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+                <!-- FCP_Radium_Rifle -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Radium_Rifle</defName>
+                    <statBases>
+                        <Mass>3.20</Mass>
+                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.00</SightsEfficiency>
+                        <ShotSpread>0.12</ShotSpread>
+                        <SwayFactor>1.18</SwayFactor>
+                        <Bulk>4.50</Bulk>
+                        <WorkToMake>30000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>75</Steel>
+                        <Uranium>30</Uranium>
+                        <ComponentIndustrial>4</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <recoilAmount>2.08</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_45acpRadium</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>32</range>
+                        <burstShotCount>2</burstShotCount>
+                        <ticksBetweenBurstShots>11</ticksBetweenBurstShots>
+                        <soundCast>Shot_HeavySMG</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>20</magazineSize>
+                        <reloadTime>4</reloadTime>
+                        <ammoSet>AmmoSet_45acpRadium</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aimedBurstShotCount>3</aimedBurstShotCount>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                    <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                </li>
+
+                <!-- FCP_Gamma_Gun -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gamma_Gun</defName>
+                    <statBases>
+                        <Mass>1.4</Mass>
+                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                        <SightsEfficiency>0.8</SightsEfficiency>
+                        <ShotSpread>0.17</ShotSpread>
+                        <SwayFactor>1.07</SwayFactor>
+                        <Bulk>4.50</Bulk>
+                        <WorkToMake>18000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Steel>30</Steel>
+                        <Uranium>60</Uranium>
+                        <ComponentIndustrial>9</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <recoilAmount>2.08</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_GammaRound_Base</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>22</range>
+                        <soundCast>Gamma_Gun_Shot</soundCast>
+                        <soundCastTail>GunTail_Light</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>8</magazineSize>
+                        <reloadTime>4</reloadTime>
+                        <ammoSet>AmmoSet_GammaRound</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                    </FireModes>
+                    <researchPrerequisite>BlowbackOperation</researchPrerequisite>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

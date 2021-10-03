@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP Classic Combat Armor Teaser</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- FCP_Apparel_Combat_Armor_Helmet -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Combat_Armor_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Combat_Armor_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Combat_Armor_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- FCP_Apparel_Combat_Armor -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Combat_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>12</Bulk>
+                        <WornBulk>5</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Combat_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Combat_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Combat_Armor"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <CarryBulk>20</CarryBulk>
+                            <CarryWeight>25</CarryWeight>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+                <!-- FCP_Apparel_Reillys_Ranger_Battle_Helmet -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Reillys_Ranger_Battle_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Reillys_Ranger_Battle_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Reillys_Ranger_Battle_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- FCP_Apparel_Reillys_Ranger_Battle_Armor -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Reillys_Ranger_Battle_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>12</Bulk>
+                        <WornBulk>5</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Reillys_Ranger_Battle_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Reillys_Ranger_Battle_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Reillys_Ranger_Battle_Armor"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <CarryBulk>20</CarryBulk>
+                            <CarryWeight>25</CarryWeight>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+                <!-- FCP_Apparel_Rivit_City_Security_Helmet -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Rivit_City_Security_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Rivit_City_Security_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Rivit_City_Security_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- FCP_Apparel_Rivit_City_Security_Uniform -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Rivit_City_Security_Uniform"]/statBases</xpath>
+                    <value>
+                        <Bulk>12</Bulk>
+                        <WornBulk>5</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Rivit_City_Security_Uniform"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Rivit_City_Security_Uniform"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Rivit_City_Security_Uniform"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <CarryBulk>20</CarryBulk>
+                            <CarryWeight>25</CarryWeight>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+                <!-- FCP_Apparel_Talon_Company_Combat_Helmet -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Talon_Company_Combat_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Talon_Company_Combat_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Talon_Company_Combat_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- FCP_Apparel_Talon_Company_Combat_Armor -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Talon_Company_Combat_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>12</Bulk>
+                        <WornBulk>5</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Talon_Company_Combat_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Talon_Company_Combat_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Talon_Company_Combat_Armor"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <CarryBulk>20</CarryBulk>
+                            <CarryWeight>25</CarryWeight>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+                <!-- FCP_Apparel_Tenpenny_Security_Helmet -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Tenpenny_Security_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Tenpenny_Security_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Tenpenny_Security_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- FCP_Apparel_Tenpenny_Security_Armor -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Tenpenny_Security_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>12</Bulk>
+                        <WornBulk>5</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Tenpenny_Security_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Tenpenny_Security_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Tenpenny_Security_Armor"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <CarryBulk>20</CarryBulk>
+                            <CarryWeight>25</CarryWeight>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+                <!-- FCP_Apparel_Van_Graff_Combat_Helmet -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Van_Graff_Combat_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Van_Graff_Combat_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Van_Graff_Combat_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- FCP_Apparel_Van_Graff_Combat_Armor -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Van_Graff_Combat_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>12</Bulk>
+                        <WornBulk>5</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Van_Graff_Combat_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Van_Graff_Combat_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Van_Graff_Combat_Armor"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <CarryBulk>20</CarryBulk>
+                            <CarryWeight>25</CarryWeight>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+    <!-- This isn't needed YET, but is implied in US ARMY mod, 
+    that defs will be removed, so we should only patch if the mod is not found -->
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP US Army Equipment Teaser</li>
+        </mods>
+        <nomatch Class="PatchOperationSequence">
+            <operations>
+
+                <!-- FCP_Apparel_US_Army_Combat_Helmet -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_US_Army_Combat_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_US_Army_Combat_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_US_Army_Combat_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- FCP_Apparel_US_Army_Combat_Armor -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_US_Army_Combat_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>12</Bulk>
+                        <WornBulk>5</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_US_Army_Combat_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_US_Army_Combat_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_US_Army_Combat_Armor"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <CarryBulk>20</CarryBulk>
+                            <CarryWeight>25</CarryWeight>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+
+                <!-- FCP_Apparel_Winterized_Combat_Helmet -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Combat_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Combat_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Combat_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- FCP_Apparel_Winterized_Combat_Armor -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Combat_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>12</Bulk>
+                        <WornBulk>5</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Combat_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Combat_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Combat_Armor"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <CarryBulk>20</CarryBulk>
+                            <CarryWeight>25</CarryWeight>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+                <!-- FCP_Apparel_Winterized_Medic_Helmet -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Medic_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>4</Bulk>
+                        <WornBulk>1</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Medic_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Medic_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- FCP_Apparel_Winterized_Medic_Armor -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Medic_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>12</Bulk>
+                        <WornBulk>5</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Medic_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>8</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Medic_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>16</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Winterized_Medic_Armor"]</xpath>
+                    <value>
+                        <equippedStatOffsets>
+                            <CarryBulk>20</CarryBulk>
+                            <CarryWeight>25</CarryWeight>
+                        </equippedStatOffsets>
+                    </value>
+                </li>
+
+            </operations>
+        </nomatch>
+    </Operation>
+
+</Patch>

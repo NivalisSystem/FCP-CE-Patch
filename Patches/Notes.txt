@@ -6,14 +6,16 @@ Even though I've done my best to test everything, there may still be errors, so 
 
 [b]Please report any bugs or errors/wrong stats in the discussions section![/b]
 
-[b]Version: 1.3.0.98[/b]
+[b]Version: 1.3.1.8[/b]
 
-[b]Patched FCP Powder Ganger Equipment Teaser[/b]
+[b]Patched Vault-Tec - Handy things for your vault![/b]
 
-Patched Chinese Remnant Equipment Teaser!
-Re-worked ammo patching/adding. (No errors if you don't have a specific pack loaded and textures cannot be found)
-Removed dependency on VWE - Lasers 
-Quick pistol rebalance
+Patched FCP Minuteman Equipment Teaser (Thanks to Red_Bunny for providing the patches)
+Patched FCP Raider Armor and Apparel Teaser! (Thanks to Red_Bunny for providing the patches)
+Patched FCP Makeshift Weapons Pack! (Thanks to Red_Bunny for providing the patches)
+Patched FCP Children of Atom Equipment Teaser
+Added new CE Loading Bench art from Ranger Rick!
+Fixed patching for FCP US Army Equipment Teaser update
 
 [h1]Currently Supported[/h1]
 [list]
@@ -29,6 +31,13 @@ Quick pistol rebalance
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2537679221] Chinese Remnant Equipment Teaser [/url]
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2543891891] FCP Fallout Creation Club Rifle Pack! [/url]
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2568384022] FCP Powder Ganger Equipment Teaser [/url]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2522252565] FCP Classic Combat Armor Teaser [/url]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2526607612] FCP Great Khan Equipment Teaser [/url]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2516691197] FCP Children of Atom Equipment Teaser [/url]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2533952036] FCP Makeshift Weapons Pack [/url] (Thanks to Red_Bunny!)
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2548035824] FCP Raider Armor and Apparel Teaser [/url] (Thanks to Red_Bunny!)
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2550991340] FCP Minuteman Equipment Teaser [/url] (Thanks to Red_Bunny!)
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=1888778429] Vault-Tec - Handy things for your vault! [/url]
 [/list]
 
 [h1]FCP Collection mods that do not need a CE Patch[/h1]
@@ -55,25 +64,4 @@ Feel free to suggest any packs you would like to see next.
 
 [b]Not Finished[/b]
 Fallout: Red Scare (Beta)
-Vault-Tec - Handy things for your vault!
-FCP Children of Atom Equipment Teaser
-FCP Classic Combat Armor Teaser
-FCP Great Khan Equipment Teaser
-FCP Institute and Railroad Teaser
-FCP Makeshift Weapons Pack
-FCP Raider Armor and Apparel Teaser
-FCP Minuteman Equipment Teaser
-
-[b]Done![/b]
-[strike]FCP Fallout New Vegas Pistols![/strike]
-[strike]FCP Fallout New Vegas Revolvers![/strike]
-[strike]FCP Fallout New Vegas Submachine Guns![/strike]
-[strike]FCP Fallout New Vegas Shotguns![/strike]
-[strike]FCP Fallout New Vegas Lever Action Rifles![/strike]
-[strike]FCP Fallout New Vegas Assault Rifles and LMG Pack![/strike]
-[strike]FCP Fallout New Vegas Heavy Weapons Pack![/strike]
-[strike]FCP Desert Ranger Equipment Teaser[/strike]
-[strike]FCP US Army Equipment Teaser[/strike]
-[strike]FCP Chinese Remnant Equipment Teaser[/strike]
-[strike]FCP Fallout Creation Club Rifle Pack![/strike]
-[strike]FCP Powder Ganger Equipment Teaser[/strike]
+FCP Institute and Railroad Teaser (In Progress, base mod needs fixes, Synth Race/HAR issues)

@@ -270,7 +270,7 @@
         </match>
     </Operation>
 
-<!-- We only want to patch these if FCP US Army Equipment isn't loaded (it removes these in favor of the ones from the pack)-->
+    <!-- We only want to patch these if FCP US Army Equipment isn't loaded (it removes these in favor of the ones from the pack)-->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>FCP US Army Equipment Teaser</li>
@@ -317,13 +317,57 @@
                     </value>
                 </li>
 
-                
+                <!-- R91 -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_R91ARUSA</defName>
+                    <statBases>
+                        <WorkToMake>40000</WorkToMake>
+                        <Mass>3.50</Mass>
+                        <Bulk>12.00</Bulk>
+                        <SwayFactor>1.17</SwayFactor>
+                        <ShotSpread>0.09</ShotSpread>
+                        <SightsEfficiency>1.2</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                    </statBases>
+                    <costList>
+                        <Steel>60</Steel>
+                        <ComponentIndustrial>7</ComponentIndustrial>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_556x45mmNATO_FMJ</defaultProjectile>
+                        <burstShotCount>6</burstShotCount>
+                        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+                        <warmupTime>1.1</warmupTime>
+                        <range>35</range>
+                        <soundCast>Shot_AssaultRifle</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                        <recoilAmount>2.12</recoilAmount>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>30</magazineSize>
+                        <reloadTime>2</reloadTime>
+                        <ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>Snapshot</aiAimMode>
+                        <aiUseBurstMode>True</aiUseBurstMode>
+                        <aimedBurstShotCount>3</aimedBurstShotCount>
+                    </FireModes>
+                    <weaponTags>
+                        <li>IndustrialGunAdvanced</li>
+                    </weaponTags>
+                    <!-- Required Research Rework -->
+                    <researchPrerequisite>PrecisionRifling</researchPrerequisite>
+                </li>
 
             </operations>
         </nomatch>
     </Operation>
 
-<!-- We only want to patch FCP_Gun_Marksman_Carbine if the following mods aren't loaded (it removes these in favor of the ones from the pack) -->
+    <!-- We only want to patch FCP_Gun_Marksman_Carbine if the following mods aren't loaded (it removes these in favor of the ones from the pack) -->
     <Operation Class="PatchOperationFindMod">
         <mods>
             <li>FCP US Army Equipment Teaser</li>

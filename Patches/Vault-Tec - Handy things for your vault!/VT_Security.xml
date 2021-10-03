@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vault-Tec - Handy things for your vault!</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!-- ========== VTTurret_MiniTurret ========== -->
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VTTurret_MiniTurret"]/thingClass</xpath>
+                    <value>
+                        <thingClass>CombatExtended.Building_TurretGunCE</thingClass>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="VTTurret_MiniTurret"]/statBases</xpath>
+                    <value>
+                        <AimingAccuracy>0.25</AimingAccuracy>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VTTurret_MiniTurret"]/statBases/ShootingAccuracyTurret</xpath>
+                    <value>
+                        <ShootingAccuracyTurret>0.5</ShootingAccuracyTurret>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VTTurret_MiniTurret"]/statBases/Mass</xpath>
+                    <value>
+                        <Mass>25</Mass>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef[defName="VTTurret_MiniTurret"]/comps/li[@Class = "CompProperties_Refuelable"]</xpath>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VTTurret_MiniTurret"]/fillPercent</xpath>
+                    <value>
+                        <fillPercent>0.85</fillPercent>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VTTurret_MiniTurret"]/building/turretBurstCooldownTime</xpath>
+                    <value>
+                        <turretBurstCooldownTime>1.1</turretBurstCooldownTime>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

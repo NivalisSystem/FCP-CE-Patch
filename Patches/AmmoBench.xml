@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Combat Extended</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="AmmoBench"]/graphicData/texPath</xpath>
+                    <value>
+                        <texPath>Things/Building/GunRunnersPress/GunRunnersPress</texPath>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="AmmoBench"]/graphicData/drawSize</xpath>
+                    <value>
+                        <drawSize>(2,1.5)</drawSize>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="AmmoBench"]/size</xpath>
+                    <value>
+                        <size>(2,1)</size>
+                    </value>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
