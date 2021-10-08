@@ -250,7 +250,7 @@
                         <recoilPattern>Mounted</recoilPattern>
                         <verbClass>CombatExtended.Verb_ShootCE</verbClass>
                         <hasStandardCommand>true</hasStandardCommand>
-                        <defaultProjectile>Bullet_10mmAuto_FMJ</defaultProjectile>
+                        <defaultProjectile>Bullet_10mmAuto_HV_FMJ</defaultProjectile>
                         <warmupTime>0.5</warmupTime>
                         <range>62</range>
                         <burstShotCount>20</burstShotCount>
@@ -262,7 +262,7 @@
                     <AmmoUser>
                         <magazineSize>60</magazineSize>
                         <reloadTime>3.5</reloadTime>
-                        <ammoSet>AmmoSet_10mmAuto</ammoSet>
+                        <ammoSet>AmmoSet_10mmAuto_HV</ammoSet>
                     </AmmoUser>
                     <FireModes>
                         <aiAimMode>AimedShot</aiAimMode>
