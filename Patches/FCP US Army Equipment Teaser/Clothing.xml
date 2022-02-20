@@ -360,7 +360,7 @@
 
                 <!-- US Army T-51 Power Armor Helmet -->
                 <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThingDef[defName="FCP_Apparel_US_Army_Power_Armor_Helmet"]/statBases</xpath>
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T51_US_Army_Power_Armor_Helmet"]/statBases</xpath>
                     <value>
                         <Bulk>7</Bulk>
                         <WornBulk>3</WornBulk>
@@ -368,14 +368,14 @@
                 </li>
 
                 <li Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="FCP_Apparel_US_Army_Power_Armor_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T51_US_Army_Power_Armor_Helmet"]/statBases/ArmorRating_Sharp</xpath>
                     <value>
                         <ArmorRating_Sharp>18</ArmorRating_Sharp>
                     </value>
                 </li>
 
                 <li Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="FCP_Apparel_US_Army_Power_Armor_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T51_US_Army_Power_Armor_Helmet"]/statBases/ArmorRating_Blunt</xpath>
                     <value>
                         <ArmorRating_Blunt>32</ArmorRating_Blunt>
                     </value>
@@ -414,7 +414,7 @@
 
                 <!-- US Army Winter T-51 Power Armor Helmet -->
                 <li Class="PatchOperationAdd">
-                    <xpath>Defs/ThingDef[defName="FCP_Apparel_US_Army_Winter_Power_Armor_Helmet"]/statBases</xpath>
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T51_US_Army_Winter_Power_Armor_Helmet"]/statBases</xpath>
                     <value>
                         <Bulk>7</Bulk>
                         <WornBulk>3</WornBulk>
@@ -422,14 +422,14 @@
                 </li>
 
                 <li Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="FCP_Apparel_US_Army_Winter_Power_Armor_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T51_US_Army_Winter_Power_Armor_Helmet"]/statBases/ArmorRating_Sharp</xpath>
                     <value>
                         <ArmorRating_Sharp>18</ArmorRating_Sharp>
                     </value>
                 </li>
 
                 <li Class="PatchOperationReplace">
-                    <xpath>Defs/ThingDef[defName="FCP_Apparel_US_Army_Winter_Power_Armor_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T51_US_Army_Winter_Power_Armor_Helmet"]/statBases/ArmorRating_Blunt</xpath>
                     <value>
                         <ArmorRating_Blunt>32</ArmorRating_Blunt>
                     </value>
