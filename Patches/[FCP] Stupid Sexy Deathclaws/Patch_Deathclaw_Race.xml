@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>[FCP] Stupid Sexy Deathclaws</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+		<operations>
+		
+		<li Class="PatchOperationAddModExtension">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="SSD_DeathclawRace"]</xpath>
+			<value>
+				<li Class="CombatExtended.RacePropertiesExtensionCE">
+					<bodyShape>Humanoid</bodyShape>
+				</li>
+			</value>
+		</li>
+
+		<li Class="PatchOperationAdd">
+		 <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="SSD_DeathclawRace"]/statBases</xpath>
+			  <value>
+          		<Suppressability>0.5</Suppressability>
+			  </value>
+		</li>
+		
+		<li Class="PatchOperationAdd">
+		 <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="SSD_DeathclawRace"]/statBases</xpath>
+			  <value>
+			    <ReloadSpeed>0.75</ReloadSpeed>
+			  </value>
+		</li>
+
+		<li Class="PatchOperationReplace">
+		 <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="SSD_DeathclawRace"]/statBases/ArmorRating_Sharp</xpath>
+			  <value>
+      				<ArmorRating_Sharp>6.00</ArmorRating_Sharp>
+			  </value>
+		</li>
+		
+		<li Class="PatchOperationReplace">
+		 <xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="SSD_DeathclawRace"]/statBases/ArmorRating_Blunt</xpath>
+			  <value>
+					<ArmorRating_Blunt>15.00</ArmorRating_Blunt>
+			  </value>
+		</li>
+		
+		<li Class="PatchOperationReplace">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="SSD_DeathclawRace"]/tools</xpath> 
+			<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left claw</label>
+					<capacities>
+						<li>Cut</li>
+						<li>Stab</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>1.3</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetrationBlunt>3</armorPenetrationBlunt>
+					<armorPenetrationSharp>6.5</armorPenetrationSharp>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right claw</label>
+					<capacities>
+						<li>Cut</li>
+						<li>Stab</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>1.3</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetrationBlunt>3</armorPenetrationBlunt>
+					<armorPenetrationSharp>6.5</armorPenetrationSharp>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>6</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetrationBlunt>3</armorPenetrationBlunt>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+				<label>horns</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Stab</li>		  
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.3</cooldownTime>
+				<linkedBodyPartsGroup>HornAttackTool</linkedBodyPartsGroup>
+				<chanceFactor>0.25</chanceFactor>
+				<armorPenetrationBlunt>3</armorPenetrationBlunt>
+				<armorPenetrationSharp>4</armorPenetrationSharp>
+				</li>
+			</tools>
+			</value>
+		</li>
+
+		<li Class="PatchOperationAdd">
+			<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="SSD_DeathclawRace"]/comps</xpath>
+			<value>
+				<li>
+				  <compClass>CombatExtended.CompPawnGizmo</compClass>
+				</li>
+				<li Class="CombatExtended.CompProperties_Suppressable" />
+			</value>
+		</li>
+
+		</operations>
+		</match>
+	</Operation>
+</Patch>
