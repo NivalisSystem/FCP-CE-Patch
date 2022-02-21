@@ -7,6 +7,7 @@ Even though I've done my best to test everything, there may still be errors, so 
 [b]Please report any bugs or errors/wrong stats in the discussions section![/b]
 
 [b]Latest Changes[/b]
+Added: Patches Stupid Sexy Deathclaws and Enclave Armory (thanks to FluffyTowels)
 Fixed: Fixed apparel patch for US Army Equipment Teaser (class name changed)
 
 [h1]Currently Supported[/h1]
@@ -30,6 +31,9 @@ Fixed: Fixed apparel patch for US Army Equipment Teaser (class name changed)
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2548035824] FCP Raider Armor and Apparel Teaser [/url] (Thanks to Red_Bunny!)
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2550991340] FCP Minuteman Equipment Teaser [/url] (Thanks to Red_Bunny!)
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=1888778429] Vault-Tec - Handy things for your vault! [/url]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2635389101] [FCP] Stupid Sexy Deathclaws [/url] (Thanks to FluffyTowels!)
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2635484477] FCP Enclave Armory! [/url] (Thanks to FluffyTowels!)
+
 [/list]
 
 [h1]FCP Collection mods that do not need a CE Patch[/h1]
