@@ -8,6 +8,7 @@
     <packageId>LXD.FCPCEP.1.3.0</packageId>
     <description>\nPatches the Fallout Collaboration Project to work with Combat Extended.\n
     Latest changes:\n
+    - Added patches for FCP FNV Laser Weapons\n
     - Added patches for Insitute and Railroad Teaser\n
     - Added patches Stupid Sexy Deathclaws and Enclave Armory (thanks to FluffyTowels)\n
     - Fixed: Fixed apparel patch for US Army Equipment Teaser (class name changed)\n

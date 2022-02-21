@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP FNV Laser Weapons</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+
+
+                <li Class="PatchOperationReplace">
+                    <xpath>
+						/Defs/ThingDef[
+							defName = "FCP_Gun_Laser_Pistol" or 
+							defName = "FCP_Gun_Pew_Pew" or 
+							defName = "FCP_Gun_Recharger_Pistol" or 
+							defName = "FCP_Gun_MF_hyperbreeder_Alpha"
+						]/tools
+                    </xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>grip</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>2</power>
+                                <cooldownTime>1.54</cooldownTime>
+                                <chanceFactor>1.5</chanceFactor>
+                                <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Grip</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>muzzle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>2</power>
+                                <cooldownTime>1.54</cooldownTime>
+                                <armorPenetrationBlunt>0.555</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+
+                <!-- Laser Pistol -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Laser_Pistol</defName>
+                    <statBases>
+                        <Mass>3.6</Mass>
+                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                        <SightsEfficiency>0.70</SightsEfficiency>
+                        <ShotSpread>0.17</ShotSpread>
+                        <SwayFactor>0.83</SwayFactor>
+                        <Bulk>2.86</Bulk>
+                        <WorkToMake>45000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Plasteel>25</Plasteel>
+                        <ComponentSpacer>2</ComponentSpacer>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_EnergyCell_Pistol</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>22</range>
+                        <soundCast>Shot_Laser</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+
+                    <AmmoUser>
+                        <magazineSize>30</magazineSize>
+                        <reloadTime>2</reloadTime>
+                        <ammoSet>AmmoSet_EnergyCell</ammoSet>
+                    </AmmoUser>
+
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+
+                    <weaponTags>
+                        <li>CE_AI_Pistol</li>
+                        <li>CE_Sidearm</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                </li>
+
+                <!-- Pew Pew -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Pew_Pew</defName>
+                    <statBases>
+                        <Mass>3.6</Mass>
+                        <RangedWeapon_Cooldown>0.37</RangedWeapon_Cooldown>
+                        <SightsEfficiency>0.70</SightsEfficiency>
+                        <ShotSpread>0.17</ShotSpread>
+                        <SwayFactor>0.83</SwayFactor>
+                        <Bulk>2.86</Bulk>
+                        <WorkToMake>70000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Plasteel>25</Plasteel>
+                        <ComponentSpacer>2</ComponentSpacer>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_EnergyCell_PewPew</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>18</range>
+                        <soundCast>Shot_Laser</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+
+                    <AmmoUser>
+                        <magazineSize>2</magazineSize>
+                        <reloadTime>1</reloadTime>
+                        <ammoSet>AmmoSet_EnergyCell_PewPew</ammoSet>
+                    </AmmoUser>
+
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+
+                    <weaponTags>
+                        <li>CE_AI_Pistol</li>
+                        <li>CE_Sidearm</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                </li>
+
+                <!-- Recharger Pistol -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Recharger_Pistol</defName>
+                    <statBases>
+                        <Mass>3.6</Mass>
+                        <RangedWeapon_Cooldown>0.7</RangedWeapon_Cooldown>
+                        <SightsEfficiency>0.70</SightsEfficiency>
+                        <ShotSpread>0.17</ShotSpread>
+                        <SwayFactor>0.83</SwayFactor>
+                        <Bulk>2.86</Bulk>
+                        <WorkToMake>55000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Plasteel>25</Plasteel>
+                        <ComponentSpacer>2</ComponentSpacer>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_EnergyCell_Pistol</defaultProjectile>
+                        <warmupTime>0.9</warmupTime>
+                        <range>22</range>
+                        <soundCast>Shot_Laser</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+
+                    <weaponTags>
+                        <li>CE_AI_Pistol</li>
+                        <li>CE_Sidearm</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                </li>
+
+                <!-- MF Hyperbreeder Alpha -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_MF_hyperbreeder_Alpha</defName>
+                    <statBases>
+                        <Mass>3.6</Mass>
+                        <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+                        <SightsEfficiency>0.70</SightsEfficiency>
+                        <ShotSpread>0.17</ShotSpread>
+                        <SwayFactor>0.83</SwayFactor>
+                        <Bulk>2.86</Bulk>
+                        <WorkToMake>110000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Plasteel>25</Plasteel>
+                        <ComponentSpacer>2</ComponentSpacer>
+                    </costList>
+                    <Properties>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_EnergyCell_Pistol</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>22</range>
+                        <soundCast>Shot_Laser</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+
+                    <weaponTags>
+                        <li>CE_AI_Pistol</li>
+                        <li>CE_Sidearm</li>
+                        <li>CE_OneHandedWeapon</li>
+                    </weaponTags>
+                </li>
+
+
+                <li Class="PatchOperationReplace">
+                    <xpath>
+						/Defs/ThingDef[
+							defName = "FCP_Gun_Laser_Rifle" or
+							defName = "FCP_Gun_AER14_Prototype" or
+							defName = "FCP_Gun_Tri_Beam_Laser_Rifle" or 
+							defName = "FCP_Gun_Gatling_Laser" or
+                            defName = "FCP_Gun_Sprtel_Wood_9700a" or
+                            defName = "FCP_Gun_Laser_RCW" or
+                            defName = "FCP_Gun_Recharger_Rifle"
+						]/tools
+                    </xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>stock</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <chanceFactor>1.5</chanceFactor>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>barrel</label>
+                                <capacities>
+                                    <li>Blunt</li>
+                                </capacities>
+                                <power>5</power>
+                                <cooldownTime>2.02</cooldownTime>
+                                <armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>muzzle</label>
+                                <capacities>
+                                    <li>Poke</li>
+                                </capacities>
+                                <power>8</power>
+                                <cooldownTime>1.55</cooldownTime>
+                                <armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+                                <linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+                            </li>
+                        </tools>
+                    </value>
+                </li>
+
+
+                <!-- Laser Rifle -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Laser_Rifle</defName>
+                    <statBases>
+                        <WorkToMake>65000</WorkToMake>
+                        <Mass>4.8</Mass>
+                        <Bulk>6.50</Bulk>
+                        <SwayFactor>1.3</SwayFactor>
+                        <ShotSpread>0.07</ShotSpread>
+                        <SightsEfficiency>1.1</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
+                    </statBases>
+                    <Properties>
+                        <recoilAmount>0.01</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_MFCell_LaserRifle</defaultProjectile>
+                        <warmupTime>1</warmupTime>
+                        <range>52</range>
+                        <burstShotCount>3</burstShotCount>
+                        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+                        <soundCast>Shot_Laser</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>30</magazineSize>
+                        <reloadTime>2.5</reloadTime>
+                        <ammoSet>AmmoSet_MFCell</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>AimedShot</aiAimMode>
+                        <aiUseBurstMode>True</aiUseBurstMode>
+                        <aimedBurstShotCount>3</aimedBurstShotCount>
+                    </FireModes>
+                </li>
+
+                <!-- AER14 Prototype -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_AER14_Prototype</defName>
+                    <statBases>
+                        <WorkToMake>65000</WorkToMake>
+                        <Mass>4.8</Mass>
+                        <Bulk>6.50</Bulk>
+                        <SwayFactor>1.3</SwayFactor>
+                        <ShotSpread>0.07</ShotSpread>
+                        <SightsEfficiency>1.1</SightsEfficiency>
+                        <RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
+                    </statBases>
+                    <Properties>
+                        <recoilAmount>0.01</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_MFCell_AER</defaultProjectile>
+                        <warmupTime>1</warmupTime>
+                        <range>52</range>
+                        <burstShotCount>3</burstShotCount>
+                        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+                        <soundCast>Shot_Laser</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>20</magazineSize>
+                        <reloadTime>2.5</reloadTime>
+                        <ammoSet>AmmoSet_MFCell_AER</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>AimedShot</aiAimMode>
+                        <aiUseBurstMode>True</aiUseBurstMode>
+                        <aimedBurstShotCount>3</aimedBurstShotCount>
+                    </FireModes>
+                </li>
+
+
+                <!-- Tri-Beam Laser Rifle -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Tri_Beam_Laser_Rifle</defName>
+                    <statBases>
+                        <WorkToMake>70000</WorkToMake>
+                        <Mass>4.8</Mass>
+                        <Bulk>6.50</Bulk>
+                        <SwayFactor>1.3</SwayFactor>
+                        <ShotSpread>0.07</ShotSpread>
+                        <SightsEfficiency>1.1</SightsEfficiency>
+                        <RangedWeapon_Cooldown>1.35</RangedWeapon_Cooldown>
+                    </statBases>
+                    <Properties>
+                        <recoilAmount>0.01</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_MFCell_LaserRifle</defaultProjectile>
+                        <warmupTime>1.3</warmupTime>
+                        <range>26</range>
+                        <burstShotCount>3</burstShotCount>
+                        <ticksBetweenBurstShots>-1</ticksBetweenBurstShots>
+                        <soundCast>Shot_Laser</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>30</magazineSize>
+                        <reloadTime>2.5</reloadTime>
+                        <ammoSet>AmmoSet_MFCell</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>AimedShot</aiAimMode>
+                        <noSingleShot>True</noSingleShot>
+                        <aiUseBurstMode>True</aiUseBurstMode>
+                        <aimedBurstShotCount>3</aimedBurstShotCount>
+                    </FireModes>
+                </li>
+
+                <!-- Gatling Laser -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Gatling_Laser</defName>
+                    <statBases>
+                        <Mass>30.00</Mass>
+                        <RangedWeapon_Cooldown>0.35</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1</SightsEfficiency>
+                        <ShotSpread>0.06</ShotSpread>
+                            <SwayFactor>5.41</SwayFactor>
+                    <Bulk>10</Bulk>
+                    </statBases>
+                    <Properties>
+                        <recoilAmount>0.75</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_MFCell_LaserRifle</defaultProjectile>
+                        <warmupTime>2.3</warmupTime>
+                        <range>56</range>
+                        <burstShotCount>40</burstShotCount>
+                        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                        <soundCast>Shot_Laser</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>240</magazineSize>
+                        <reloadTime>6.2</reloadTime>
+                        <ammoSet>AmmoSet_MFCell</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>SuppressFire</aiAimMode>
+                        <aimedBurstShotCount>20</aimedBurstShotCount>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_AI_Suppressive</li>
+                    </weaponTags>    
+                </li>
+
+                <!-- Sprtel-Wood 9700 -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Sprtel_Wood_9700a</defName>
+                    <statBases>
+                        <Mass>30.00</Mass>
+                        <RangedWeapon_Cooldown>0.35</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1</SightsEfficiency>
+                        <ShotSpread>0.06</ShotSpread>
+                            <SwayFactor>5.41</SwayFactor>
+                    <Bulk>10</Bulk>
+                    </statBases>
+                    <Properties>
+                        <recoilAmount>0.75</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_MFCell_AER</defaultProjectile>
+                        <warmupTime>2.3</warmupTime>
+                        <range>56</range>
+                        <burstShotCount>30</burstShotCount>
+                        <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+                        <soundCast>Shot_Laser</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <AmmoUser>
+                        <magazineSize>90</magazineSize>
+                        <reloadTime>4.2</reloadTime>
+                        <ammoSet>AmmoSet_MFCell_AER</ammoSet>
+                    </AmmoUser>
+                    <FireModes>
+                        <aiAimMode>SuppressFire</aiAimMode>
+                        <aimedBurstShotCount>15</aimedBurstShotCount>
+                    </FireModes>
+                    <weaponTags>
+                        <li>CE_AI_Suppressive</li>
+                    </weaponTags>    
+                </li>
+
+                <!-- Laser RCW -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Laser_RCW</defName>
+                    <statBases>
+                        <Mass>4.25</Mass>
+                        <RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+                        <SightsEfficiency>1.00</SightsEfficiency>
+                        <ShotSpread>0.12</ShotSpread>
+                        <SwayFactor>1.21</SwayFactor>
+                        <Bulk>9.43</Bulk>
+                        <WorkToMake>68000</WorkToMake>
+                    </statBases>
+                    <costList>
+                        <Plasteel>45</Plasteel>
+                        <ComponentSpacer>3</ComponentSpacer>
+                    </costList>
+                    <Properties>
+                        <recoilAmount>1.32</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_EnergyCell_Pistol</defaultProjectile>
+                        <warmupTime>0.6</warmupTime>
+                        <range>28</range>
+                        <burstShotCount>6</burstShotCount>
+                        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+                        <soundCast>Shot_Laser</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+
+                    <AmmoUser>
+                        <magazineSize>60</magazineSize>
+                        <reloadTime>3.8</reloadTime>
+                        <ammoSet>AmmoSet_EnergyCell</ammoSet>
+                    </AmmoUser>
+
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                        <aiAimMode>Snapshot</aiAimMode>
+                        <aimedBurstShotCount>3</aimedBurstShotCount>
+                    </FireModes>
+
+                    <weaponTags>
+                        <li>CE_AI_AssaultWeapon</li>
+                        <li>CE_SMG</li>
+                    </weaponTags>
+                </li>
+
+                <!-- Recharger Rifle -->
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+                    <defName>FCP_Gun_Recharger_Rifle</defName>
+                    <statBases>
+                        <WorkToMake>65000</WorkToMake>
+                        <Mass>4.8</Mass>
+                        <Bulk>6.50</Bulk>
+                        <SwayFactor>1.3</SwayFactor>
+                        <ShotSpread>0.07</ShotSpread>
+                        <SightsEfficiency>1.1</SightsEfficiency>
+                        <RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
+                    </statBases>
+                    <Properties>
+                        <recoilAmount>0.01</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>True</hasStandardCommand>
+                        <defaultProjectile>Bullet_MFCell_LaserRifle</defaultProjectile>
+                        <warmupTime>1</warmupTime>
+                        <range>52</range>
+                        <soundCast>Shot_Laser</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                    </FireModes>
+                </li>
+
+            </operations>
+        </match>
+    </Operation>
+</Patch>

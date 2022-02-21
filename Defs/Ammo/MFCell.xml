@@ -19,6 +19,15 @@
         </ammoTypes>
     </CombatExtended.AmmoSetDef>
 
+    <!-- AER14 -->
+    <CombatExtended.AmmoSetDef>
+        <defName>AmmoSet_MFCell_AER</defName>
+        <label>microfusion cell</label>
+        <ammoTypes>
+            <Ammo_MFCell>Bullet_MFCell_AER</Ammo_MFCell>
+        </ammoTypes>
+    </CombatExtended.AmmoSetDef>
+
     <!-- Laser Musket -->
     <CombatExtended.AmmoSetDef>
         <defName>AmmoSet_MFCell_Musket</defName>
@@ -84,6 +93,24 @@
                 <li>
                     <def>Flame_Secondary</def>
                     <amount>4</amount>
+                </li>
+            </secondaryDamage>
+        </projectile>
+    </ThingDef>
+
+    <!-- AER14 -->
+    <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="LaserBulletGreen">
+        <defName>Bullet_MFCell_AER</defName>
+        <label>laser beam</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>20</damageAmountBase>
+            <armorPenetrationSharp>17.5</armorPenetrationSharp>
+            <armorPenetrationBlunt>0.001</armorPenetrationBlunt>
+            <secondaryDamage>
+                <li>
+                    <def>Flame_Secondary</def>
+                    <amount>8</amount>
                 </li>
             </secondaryDamage>
         </projectile>

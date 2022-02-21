@@ -7,6 +7,7 @@ Even though I've done my best to test everything, there may still be errors, so 
 [b]Please report any bugs or errors/wrong stats in the discussions section![/b]
 
 [b]Latest Changes[/b]
+Added: Patches for FCP FNV Laser Weapons
 Added: Patches for Insitute and Railroad Teaser
 Added: Patches Stupid Sexy Deathclaws and Enclave Armory (thanks to FluffyTowels)
 Fixed: Apparel patch for US Army Equipment Teaser (class name changed)
@@ -37,6 +38,7 @@ Fixed: Errors generated when certain mods were not loaded
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2635389101] [FCP] Stupid Sexy Deathclaws [/url] (Thanks to FluffyTowels!)
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2635484477] FCP Enclave Armory! [/url] (Thanks to FluffyTowels!)
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2529981224] FCP Institute and Railroad Teaser [/url]
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2608148101] FCP FNV Laser Weapons [/url]
 
 [/list]
 
