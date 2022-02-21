@@ -7,6 +7,7 @@ Even though I've done my best to test everything, there may still be errors, so 
 [b]Please report any bugs or errors/wrong stats in the discussions section![/b]
 
 [b]Latest Changes[/b]
+Added: Patches for Insitute and Railroad Teaser
 Added: Patches Stupid Sexy Deathclaws and Enclave Armory (thanks to FluffyTowels)
 Fixed: Apparel patch for US Army Equipment Teaser (class name changed)
 Fixed: Missing patches for added Power Armor (T60 and Raider)
@@ -35,6 +36,7 @@ Fixed: Errors generated when certain mods were not loaded
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=1888778429] Vault-Tec - Handy things for your vault! [/url]
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2635389101] [FCP] Stupid Sexy Deathclaws [/url] (Thanks to FluffyTowels!)
 [*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2635484477] FCP Enclave Armory! [/url] (Thanks to FluffyTowels!)
+[*] [url=steamcommunity.com/sharedfiles/filedetails/?id=2529981224] FCP Institute and Railroad Teaser [/url]
 
 [/list]
 
@@ -62,4 +64,3 @@ Feel free to suggest any packs you would like to see next.
 
 [b]Not Finished[/b]
 Fallout: Red Scare (Beta)
-FCP Institute and Railroad Teaser (In Progress, base mod needs fixes, Synth Race/HAR issues)

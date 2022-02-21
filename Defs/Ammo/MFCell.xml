@@ -28,6 +28,15 @@
         </ammoTypes>
     </CombatExtended.AmmoSetDef>
 
+    <!-- Institute Laser Rifle -->
+    <CombatExtended.AmmoSetDef>
+        <defName>AmmoSet_MFCell_Institute</defName>
+        <label>microfusion cell</label>
+        <ammoTypes>
+            <Ammo_MFCell>Bullet_MFCell_Institute</Ammo_MFCell>
+        </ammoTypes>
+    </CombatExtended.AmmoSetDef>
+
     <!-- ==================== Ammo ========================== -->
 
     <ThingDef Class="CombatExtended.AmmoDef" Name="MFCellBase" ParentName="SpacerSmallAmmoBase" Abstract="True">
@@ -62,6 +71,7 @@
 
     <!-- === Projectiles === -->
 
+    <!-- Generic (Red Laser) -->
     <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="LaserBulletRed">
         <defName>Bullet_MFCell_LaserRifle</defName>
         <label>laser beam</label>
@@ -79,6 +89,25 @@
         </projectile>
     </ThingDef>
 
+    <!-- Institute (Blue Laser) -->
+    <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="LaserBulletBlue">
+        <defName>Bullet_MFCell_Institute</defName>
+        <label>laser beam</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>12</damageAmountBase>
+            <armorPenetrationSharp>17.5</armorPenetrationSharp>
+            <armorPenetrationBlunt>0.001</armorPenetrationBlunt>
+            <secondaryDamage>
+                <li>
+                    <def>Flame_Secondary</def>
+                    <amount>4</amount>
+                </li>
+            </secondaryDamage>
+        </projectile>
+    </ThingDef>
+
+    <!-- Laser Musket -->
     <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="LaserBulletRed">
         <defName>Bullet_MFCell_Musket</defName>
         <label>laser beam</label>
