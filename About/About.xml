@@ -10,6 +10,8 @@
     Latest changes:\n
     - Added patches Stupid Sexy Deathclaws and Enclave Armory (thanks to FluffyTowels)\n
     - Fixed: Fixed apparel patch for US Army Equipment Teaser (class name changed)\n
+    - Fixed: Missing patches for added Power Armor (T60 and Raider)\n
+    - Fixed: Errors generated when certain mods were not loaded\n
     </description>
     <modDependencies>
         <li>
