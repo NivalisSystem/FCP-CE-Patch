@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+        <defName>AmmoEnergyCell</defName>
+        <label>energy cell</label>
+        <parent>AmmoAdvanced</parent>
+        <iconPath>UI/Icons/ThingCategories/CaliberCharge</iconPath>
+    </ThingCategoryDef>
+
+    <!-- === Ammo Sets === -->
+
+    <!-- Laser Pistol -->
+    <CombatExtended.AmmoSetDef>
+        <defName>AmmoSet_EnergyCell</defName>
+        <label>energy cell</label>
+        <ammoTypes>
+            <Ammo_EnergyCell>Bullet_EnergyCell_Pistol</Ammo_EnergyCell>
+        </ammoTypes>
+    </CombatExtended.AmmoSetDef>
+
+    <!-- Pew Pew -->
+    <CombatExtended.AmmoSetDef>
+        <defName>AmmoSet_EnergyCell_PewPew</defName>
+        <label>energy cell</label>
+        <ammoTypes>
+            <Ammo_EnergyCell>Bullet_EnergyCell_PewPew</Ammo_EnergyCell>
+        </ammoTypes>
+    </CombatExtended.AmmoSetDef>
+
+    <!-- ==================== Ammo ========================== -->
+
+    <ThingDef Class="CombatExtended.AmmoDef" Name="EnergyCellBase" ParentName="SpacerSmallAmmoBase" Abstract="True">
+        <description>Energy cells are small, self-contained energy storage units often associated with one-handed energy weapons and act essentially as a very powerful battery or capacitor. They are the standard ammunition used by the majority of pistol-sized energy weapons, and as such are widely available across the Mojave Wasteland.</description>
+        <statBases>
+            <Mass>0.008</Mass>
+            <Bulk>0.01</Bulk>
+        </statBases>
+        <tradeTags>
+            <li>CE_AutoEnableTrade</li>
+            <li>CE_AutoEnableCrafting_FabricationBench</li>
+            <li>CE_AutoEnableCrafting_TableMachining</li>
+        </tradeTags>
+        <thingCategories>
+            <li>AmmoEnergyCell</li>
+        </thingCategories>
+        <stackLimit>5000</stackLimit>
+    </ThingDef>
+
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="EnergyCellBase">
+        <defName>Ammo_EnergyCell</defName>
+        <label>energy cell</label>
+        <graphicData>
+            <texPath>Things/Ammo/Charged/Regular</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>0.69</MarketValue>
+        </statBases>
+        <ammoClass>Charged</ammoClass>
+    </ThingDef>
+
+    <!-- === Projectiles === -->
+
+    <!-- Generic (Red Laser) -->
+    <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="LaserBulletRed">
+        <defName>Bullet_EnergyCell_Pistol</defName>
+        <label>laser beam</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>6</damageAmountBase>
+            <armorPenetrationSharp>12.5</armorPenetrationSharp>
+            <armorPenetrationBlunt>0.001</armorPenetrationBlunt>
+            <secondaryDamage>
+                <li>
+                    <def>Flame_Secondary</def>
+                    <amount>2</amount>
+                </li>
+            </secondaryDamage>
+        </projectile>
+    </ThingDef>
+
+    <!-- Pew Pew -->
+    <ThingDef Class="CombatExtended.Lasers.LaserBeamDefCE" ParentName="LaserBulletRed">
+        <defName>Bullet_EnergyCell_PewPew</defName>
+        <label>laser beam</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>24</damageAmountBase>
+            <armorPenetrationSharp>12.5</armorPenetrationSharp>
+            <armorPenetrationBlunt>0.001</armorPenetrationBlunt>
+            <secondaryDamage>
+                <li>
+                    <def>Flame_Secondary</def>
+                    <amount>8</amount>
+                </li>
+            </secondaryDamage>
+        </projectile>
+    </ThingDef>
+
+    <!-- ==================== Recipes ========================== -->
+
+    <RecipeDef ParentName="ChargeAmmoRecipeBase">
+        <defName>MakeAmmo_EnergyCell</defName>
+        <label>make energy cell x500</label>
+        <description>Craft 500 energy cell.</description>
+        <jobString>Making energy cell.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Plasteel</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>4</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>ComponentIndustrial</li>
+                    </thingDefs>
+                </filter>
+                <count>8</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Plasteel</li>
+                <li>Steel</li>
+                <li>ComponentIndustrial</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Ammo_EnergyCell>500</Ammo_EnergyCell>
+        </products>
+        <workAmount>8400</workAmount>
+    </RecipeDef>
+
+</Defs>
