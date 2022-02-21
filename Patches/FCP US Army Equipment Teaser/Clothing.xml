@@ -436,6 +436,115 @@
                 </li>
 
 
+                <!-- US Army T-60 Power Armor -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T60_US_Army_Power_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>25</Bulk>
+                        <WornBulk>5</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T60_US_Army_Power_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>24</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T60_US_Army_Power_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>38</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T60_US_Army_Power_Armor"]/equippedStatOffsets</xpath>
+                    <value>
+                        <CarryBulk>40</CarryBulk>
+                        <CarryWeight>35</CarryWeight>
+                    </value>
+                </li>
+
+                <!-- US Army T-60 Power Armor Helmet -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T60_US_Army_Power_Armor_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>8</Bulk>
+                        <WornBulk>3</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T60_US_Army_Power_Armor_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>24</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T60_US_Army_Power_Armor_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>38</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <!-- US Army Winter T-60 Power Armor -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T60_US_Army_Winter_Power_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>25</Bulk>
+                        <WornBulk>5</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T60_US_Army_Winter_Power_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>24</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T60_US_Army_Winter_Power_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>38</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T60_US_Army_Winter_Power_Armor"]/equippedStatOffsets</xpath>
+                    <value>
+                        <CarryBulk>40</CarryBulk>
+                        <CarryWeight>35</CarryWeight>
+                    </value>
+                </li>
+
+                <!-- US Army Winter T-60 Power Armor Helmet -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T60_US_Army_Winter_Power_Armor_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>8</Bulk>
+                        <WornBulk>3</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T60_US_Army_Winter_Power_Armor_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>24</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_T60_US_Army_Winter_Power_Armor_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>38</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+
             </operations>
         </match>
     </Operation>
