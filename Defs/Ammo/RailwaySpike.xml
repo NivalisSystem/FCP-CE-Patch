@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+        <defName>AmmoRailwaySpike</defName>
+        <label>Railway Spike</label>
+        <parent>AmmoPistols</parent>
+        <iconPath>UI/Icons/ThingCategories/CaliberPistol</iconPath>
+    </ThingCategoryDef>
+
+    <!-- ==================== AmmoSet ========================== -->
+
+    <CombatExtended.AmmoSetDef>
+        <defName>AmmoSet_RailwaySpike</defName>
+        <label>Railway Spikes</label>
+        <ammoTypes>
+            <Ammo_RailwaySpike_FMJ>Bullet_RailwaySpike_FMJ</Ammo_RailwaySpike_FMJ>
+            <Ammo_RailwaySpike_Sabot>Bullet_RailwaySpike_Sabot</Ammo_RailwaySpike_Sabot>
+        </ammoTypes>
+    </CombatExtended.AmmoSetDef>
+
+    <!-- ==================== Ammo ========================== -->
+
+    <ThingDef Class="CombatExtended.AmmoDef" Name="RailwaySpikeBase" ParentName="SmallAmmoBase" Abstract="True">
+        <description>Railway spikes</description>
+        <statBases>
+            <Mass>0.04</Mass>
+            <Bulk>0.005</Bulk>
+        </statBases>
+        <tradeTags>
+            <li>CE_AutoEnableTrade</li>
+            <li>CE_AutoEnableCrafting</li>
+        </tradeTags>
+        <thingCategories>
+            <li>AmmoRailwaySpike</li>
+        </thingCategories>
+    </ThingDef>
+
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="RailwaySpikeBase">
+        <defName>Ammo_RailwaySpike_FMJ</defName>
+        <label>Railway Spike</label>
+        <graphicData>
+            <texPath>Things/Ammo/Pistol/FMJ</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>0.11</MarketValue>
+        </statBases>
+        <ammoClass>FullMetalJacket</ammoClass>
+        <cookOffProjectile>Bullet_RailwaySpike_FMJ</cookOffProjectile>
+    </ThingDef>
+
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="RailwaySpikeBase">
+        <defName>Ammo_RailwaySpike_Sabot</defName>
+        <label>Railway Spike (Sabot)</label>
+        <graphicData>
+            <texPath>Things/Ammo/Pistol/FMJ</texPath>
+            <graphicClass>Graphic_StackCount</graphicClass>
+        </graphicData>
+        <statBases>
+            <MarketValue>0.12</MarketValue>
+            <Mass>0.02</Mass>
+        </statBases>
+        <ammoClass>Sabot</ammoClass>
+        <cookOffProjectile>Bullet_RailwaySpike_Sabot</cookOffProjectile>
+    </ThingDef>
+
+    <!-- ================== Projectiles ================== -->
+
+    <ThingDef Class="CombatExtended.AmmoDef" Name="BaseRailwaySpikeBullet" ParentName="BaseBullet" Abstract="true">
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Railway_Spike</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageDef>Bullet</damageDef>
+            <speed>80</speed>
+            <dropsCasings>true</dropsCasings>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseRailwaySpikeBullet">
+        
+        <defName>Bullet_RailwaySpike_FMJ</defName>
+        <label>Railway Spike</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>6</damageAmountBase>
+            <armorPenetrationSharp>4</armorPenetrationSharp>
+            <armorPenetrationBlunt>66.72</armorPenetrationBlunt>
+        </projectile>
+    </ThingDef>
+
+    <ThingDef Class="CombatExtended.AmmoDef" ParentName="BaseRailwaySpikeBullet">
+        <defName>Bullet_RailwaySpike_Sabot</defName>
+        <label>Railway Spike (Sabot)</label>
+        <projectile Class="CombatExtended.ProjectilePropertiesCE">
+            <damageAmountBase>12</damageAmountBase>
+            <armorPenetrationSharp>8</armorPenetrationSharp>
+            <armorPenetrationBlunt>86.28</armorPenetrationBlunt>
+            <speed>140</speed>
+        </projectile>
+    </ThingDef>
+
+    <!-- ==================== Recipes ========================== -->
+
+    <RecipeDef ParentName="AmmoRecipeBase">
+        <defName>MakeAmmo_RailwaySpike_FMJ</defName>
+        <label>make Railway Spikes x500</label>
+        <description>Craft 500 Railway Spikes.</description>
+        <jobString>Making Railway Spikes.</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>26</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Steel</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Ammo_RailwaySpike_FMJ>500</Ammo_RailwaySpike_FMJ>
+        </products>
+        <workAmount>2600</workAmount>
+    </RecipeDef>
+
+    <RecipeDef ParentName="AdvancedAmmoRecipeBase">
+        <defName>MakeAmmo_RailwaySpike_Sabot</defName>
+        <label>make Railway Spikes (Sabot) x500</label>
+        <description>Craft 500 Railway Spikes (Sabot).</description>
+        <jobString>Making Railway Spikes (Sabot).</jobString>
+        <ingredients>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Steel</li>
+                    </thingDefs>
+                </filter>
+                <count>16</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Uranium</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+            <li>
+                <filter>
+                    <thingDefs>
+                        <li>Chemfuel</li>
+                    </thingDefs>
+                </filter>
+                <count>3</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <thingDefs>
+                <li>Steel</li>
+                <li>Uranium</li>
+                <li>Chemfuel</li>
+            </thingDefs>
+        </fixedIngredientFilter>
+        <products>
+            <Ammo_RailwaySpike_Sabot>500</Ammo_RailwaySpike_Sabot>
+        </products>
+        <workAmount>3400</workAmount>
+    </RecipeDef>
+
+</Defs>
