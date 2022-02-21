@@ -240,6 +240,61 @@
                     <xpath>Defs/ThingDef[defName="FCP_Apparel_Raider_Badland_Armor"]/equippedStatOffsets/MoveSpeed</xpath>
                 </li>
 
+                <!-- Raider Power Armor -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Raider_Power_Armor"]/statBases</xpath>
+                    <value>
+                        <Bulk>25</Bulk>
+                        <WornBulk>5</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Raider_Power_Armor"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>14</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Raider_Power_Armor"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>32</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Raider_Power_Armor"]/equippedStatOffsets</xpath>
+                    <value>
+                        <CarryBulk>30</CarryBulk>
+                        <CarryWeight>25</CarryWeight>
+                    </value>
+                </li>
+
+                <!-- Raider Power Armor Helmet -->
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Raider_Power_Armor_Helmet"]/statBases</xpath>
+                    <value>
+                        <Bulk>7</Bulk>
+                        <WornBulk>3</WornBulk>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Raider_Power_Armor_Helmet"]/statBases/ArmorRating_Sharp</xpath>
+                    <value>
+                        <ArmorRating_Sharp>14</ArmorRating_Sharp>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="FCP_Apparel_Raider_Power_Armor_Helmet"]/statBases/ArmorRating_Blunt</xpath>
+                    <value>
+                        <ArmorRating_Blunt>32</ArmorRating_Blunt>
+                    </value>
+                </li>
+
+
             </operations>
         </match>
     </Operation>
