@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>FCP NCR Armor and Apparel Pack!</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <!--__________ NCR Civilian __________-->
+
+                <!-- NCR Engineers Jumsuit -->
+
+
+                <!-- NCR Ambassadors Suit -->
+
+
+                <!-- NCR Ambassadors Dress -->
+
+
+                <!-- NCR Presidents Suit -->
+
+
+                <!--_____ NCR Army Apparel _____-->
+
+                <!-- NCR Generals Uniform -->
+
+
+                <!-- NCR Fatigues Armor -->
+
+
+                <!-- NCR MP Uniform -->
+
+
+                <!--_____ NCR Trooper Armors _____-->
+
+                <!-- NCR Troper Armor -->
+
+
+                <!-- NCR Bandoleer Armor -->
+
+
+                <!-- NCR Mantle Armor -->
+
+
+                <!-- NCR Scout Recon Armor -->
+
+
+                <!--_____ NCR Army Headgear _____-->
+
+                <!-- NCR Trooper Helmet -->
+
+
+                <!-- NCR Goggles Helmet -->
+
+
+                <!-- NCR Face Wrap Helmet -->
+
+
+                <!-- NCR Face Wrap Goggles Helmet -->
+
+
+                <!-- NCR MP Helmet -->
+
+
+                <!-- NCR Beret -->
+
+
+                <!-- NCR 1st Recon Beret -->
+
+
+                <!-- NCR Generals Cap -->
+
+
+                <!--_____ NCR Accessories _____-->
+
+                <!-- NCR Mantle -->
+
+
+                <!-- NCR Bandoleer -->
+
+
+                <!-- NCR Trooper Vest -->
+
+
+                <!-- NCR Ranger Combat Vest -->
+
+
+                <!-- NCR Ranger Duster -->
+
+
+                <!--__________ NCR Rangers __________-->
+
+                <!--_____ NCR Ranger Armors _____-->
+                
+                <!-- NCR Ranger Patrol Armor -->
+
+
+                <!--_____ NCR Ranger Apparel _____-->
+
+                <!-- NCR Ranger Combat Armor Under Outfit -->
+
+
+                <!-- Ranger Vest Outfit -->
+
+
+                <!-- Ranger Red Scarf Outfit -->
+
+
+                <!-- NCR Ranger Casual Outfit -->
+
+
+                <!--_____ NCR Ranger Headgear _____-->
+
+                <!-- NCR Ranger Patrol Hat -->
+
+
+                <!-- NCR Ranger Combat Helmet -->
+
+
+                <!-- NCR Ranger Hat -->
+
+
+                <!-- NCR Ranger Brown Hat -->
+
+
+                <!-- NCR Ranger Tan Hat -->
+
+
+                <!--__________ NCR Power Armor __________-->
+
+                <!-- NCR Salvaged Power Armor Helmet -->
+
+
+                <!-- NCR Salvaged Power Armor -->
+
+
+                <!-- NCR Scorched Sierra Power Armor Helmet -->
+
+
+                <!-- NCR Scorched Sierra Power Armor -->
+
+
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>
