@@ -156,7 +156,6 @@
     <value>
 		<li>OnHead</li>
 		<li>StrappedHead</li>
-		<li>MiddleHead</li>
     </value>
 	</li>
 	
@@ -311,7 +310,6 @@
     <value>
 		<li>OnHead</li>
 		<li>StrappedHead</li>
-		<li>MiddleHead</li>
     </value>
 	</li>
 	
@@ -465,7 +463,6 @@
     <value>
 		<li>OnHead</li>
 		<li>StrappedHead</li>
-		<li>MiddleHead</li>
     </value>
 	</li>
 	
@@ -632,7 +629,6 @@
     <value>
 		<li>OnHead</li>
 		<li>StrappedHead</li>
-		<li>MiddleHead</li>
     </value>
 	</li>
 	
@@ -793,7 +789,6 @@
     <value>
 		<li>OnHead</li>
 		<li>StrappedHead</li>
-		<li>MiddleHead</li>
     </value>
 	</li>
 
@@ -925,7 +920,6 @@
     <value>
 		<li>OnHead</li>
 		<li>StrappedHead</li>
-		<li>MiddleHead</li>
     </value>
 	</li>
 
@@ -969,13 +963,6 @@
     </value>
 	</li>
 	
-	<li Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="FCP_Apparel_Enclave_Officer_Cap"]/apparel/layers</xpath>
-    <value>
-      <li>MiddleHead</li>
-    </value>
-	</li>
-	
 	<!-- ========== Trooper Uniform ========== -->
 	
 	<li Class="PatchOperationAdd">
@@ -1013,13 +1000,6 @@
     <xpath>Defs/ThingDef[defName="FCP_Apparel_Enclave_Trooper_Cap"]/statBases/ArmorRating_Blunt</xpath>
     <value>
 		<ArmorRating_Blunt>0.12</ArmorRating_Blunt>
-    </value>
-	</li>
-	
-	<li Class="PatchOperationAdd">
-    <xpath>Defs/ThingDef[defName="FCP_Apparel_Enclave_Trooper_Cap"]/apparel/layers</xpath>
-    <value>
-      <li>MiddleHead</li>
     </value>
 	</li>
 	
@@ -1142,7 +1122,6 @@
     <value>
 		<li>OnHead</li>
 		<li>StrappedHead</li>
-		<li>MiddleHead</li>
     </value>
 	</li>
 	
