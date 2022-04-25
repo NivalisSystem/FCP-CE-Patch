@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	<!-- VT Cloth -->
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="vtblueCloth" or defName="vtyellowCloth" or defName="vtredCloth"]/statBases/StuffPower_Armor_Sharp</xpath>
-		<value>
-			<StuffPower_Armor_Sharp>0.012</StuffPower_Armor_Sharp>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="vtblueCloth" or defName="vtyellowCloth" or defName="vtredCloth"]/statBases/StuffPower_Armor_Blunt</xpath>
-		<value>
-			<StuffPower_Armor_Blunt>0.017</StuffPower_Armor_Blunt>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="vtblueCloth" or defName="vtyellowCloth" or defName="vtredCloth"]/statBases/StuffPower_Armor_Heat</xpath>
-		<value>
-			<StuffPower_Armor_Heat>0.05</StuffPower_Armor_Heat>
-		</value>
-	</Operation>
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="vtblueCloth" or defName="vtyellowCloth" or defName="vtredCloth"]/statBases</xpath>
-		<value>
-			<Bulk>0.05</Bulk>
-		</value>
-	</Operation>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vault-Tec - Handy things for your vault!</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="vtblueCloth" or defName="vtyellowCloth" or defName="vtredCloth"]/statBases/StuffPower_Armor_Sharp</xpath>
+					<value>
+						<StuffPower_Armor_Sharp>0.012</StuffPower_Armor_Sharp>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="vtblueCloth" or defName="vtyellowCloth" or defName="vtredCloth"]/statBases/StuffPower_Armor_Blunt</xpath>
+					<value>
+						<StuffPower_Armor_Blunt>0.017</StuffPower_Armor_Blunt>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="vtblueCloth" or defName="vtyellowCloth" or defName="vtredCloth"]/statBases/StuffPower_Armor_Heat</xpath>
+					<value>
+						<StuffPower_Armor_Heat>0.05</StuffPower_Armor_Heat>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="vtblueCloth" or defName="vtyellowCloth" or defName="vtredCloth"]/statBases</xpath>
+					<value>
+						<Bulk>0.05</Bulk>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>>
 </Patch>
